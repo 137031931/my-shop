@@ -17,7 +17,6 @@
           <element id="archive" name="my-shop-domain-1.0.0-SNAPSHOT.jar">
             <element id="module-output" name="my-shop-domain" />
           </element>
-          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="archive" name="my-shop-commons-1.0.0-SNAPSHOT.jar">
             <element id="module-output" name="my-shop-commons" />
           </element>
@@ -35,6 +34,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.17.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.17.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.17.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

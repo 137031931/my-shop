@@ -12,12 +12,13 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User getUser(String email, String password) {
-
+        logger.debug("调用getUser(),email:{} password:{}",email,password);
         User user = null;
         if("admin@qq.com".equals(email)){
             if("123456".equals(password)){
-               user.setEmail("admin@qq.com");
-               user.setUsername("大米");
+                user = new User();
+                 user.setEmail("admin@qq.com");
+                 user.setUsername("大米");
             }
         }else {
             logger.warn("获取\"{}\"的用户信息失败",user.getUsername());
