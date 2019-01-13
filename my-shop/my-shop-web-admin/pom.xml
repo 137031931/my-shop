@@ -51,6 +51,17 @@
             <artifactId>jstl</artifactId>
         </dependency>
         <!-- Servlet End -->
+
+        <!-- Database begin -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- Database end -->
     </dependencies>
 
 
