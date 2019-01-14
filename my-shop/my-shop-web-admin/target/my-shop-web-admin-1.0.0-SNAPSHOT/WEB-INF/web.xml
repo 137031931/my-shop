@@ -47,4 +47,15 @@
     </servlet-mapping>
     <!--=================配置DispatchServlet==================end-->
 
+    <!--=================配置Druid监控中心==================begin-->
+    <servlet>
+        <servlet-name>DruidStatView</servlet-name>
+        <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DruidStatView</servlet-name>
+        <url-pattern>/druid/*</url-pattern>
+    </servlet-mapping>
+    <!--=================配置Druid监控中心==================begin-->
+
 </web-app>
