@@ -10,6 +10,35 @@ public interface TbUserDao {
     /**
      * 查询用户表全部信息
      * @return
+     * 1.8版本以后public可以不写
+     *
      */
-    public List<TbUser> selectAll();
+     List<TbUser> selectAll();
+
+    /**
+     * 新增用户
+     * @param tbUser
+     */
+    void insert(TbUser tbUser);
+
+    /**
+     * 根据id删除方法
+     */
+    void delete(Long id);
+
+    /**
+     * 根据id查询用户信息
+     */
+    TbUser getById(Long id);
+
+    /**
+     * 更新用户
+     */
+    void update(TbUser tbUser);
+
+    /**
+     * 模糊查询
+     */
+
+    List<TbUser> selectByUsername(String username);
 }

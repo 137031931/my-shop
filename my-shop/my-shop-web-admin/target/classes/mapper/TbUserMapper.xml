@@ -17,4 +17,79 @@
         tb_user AS a
 
     </select>
+
+    <!-- 因为主键自增,所以可以不写id -->
+    <insert id="insert">
+        INSERT INTO tb_user (
+          `id`,
+          `username`,
+          `password`,
+          `phone`,
+          `email`,
+          `created`,
+          `updated`
+        )
+        VALUES
+          (
+            #{id},
+            #{username},
+            #{password},
+            #{phone},
+            #{email},
+            #{created},
+            #{updated}
+          );
+
+    </insert>
+    <!-- 根据id删除 -->
+    <delete id="delete">
+        DELETE FROM tb_user WHERE id = #{id};
+
+    </delete>
+
+    <!-- 查询一定要有结果映射 -->
+    <select id="getById" resultType="TbUser">
+        SELECT
+            a.id,
+            a.username,
+            a.password,
+            a.phone,
+            a.email,
+            a.created,
+            a.updated
+        FROM
+            tb_user AS a
+        WHERE a.id = #{id};
+    </select>
+
+    <!-- 更新用户的id不变,创建时间也不变 -->
+    <update id="update">
+
+        UPDATE
+          tb_user
+        SET
+          username = #{username},
+          password = #{password},
+          phone = #{phone},
+          email = #{email},
+          updated = #{updated}
+        WHERE id = #{id};
+    </update>
+
+    <!-- 根据用户名查询 -->
+    <select id="selectByUsername" resultType="TbUser">
+        SELECT
+          a.id,
+          a.username,
+          a.password,
+          a.phone,
+          a.email,
+          a.created,
+          a.updated
+        FROM
+          tb_user AS a
+        WHERE
+          a.username LIKE CONCAT('%',#{username},'%')
+
+    </select>
 </mapper>
