@@ -5,6 +5,7 @@ import com.damiza.my.shop.web.admin.dao.TbUserDao;
 import com.damiza.my.shop.web.admin.service.TbUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.DigestUtils;
 
 import java.util.List;
 @Service
@@ -41,5 +42,24 @@ public class TbUserServiceImpl implements TbUserService {
     @Override
     public List<TbUser> selectByUsername(String username) {
         return tbUserDao.selectByUsername(username);
+    }
+
+    @Override
+    public TbUser login(String email,String password) {
+
+        TbUser tbUser = tbUserDao.getByEmail(email);
+        /**
+         * 验证登录
+         */
+        //如果用用户不为空就把密码用md5的方式转码
+        if (tbUser != null){
+            String md5Password = DigestUtils.md5DigestAsHex(password.getBytes());
+            //转码后的密码与数据库中的相比较是否相同,相同则登录成功
+            if (md5Password.equals(tbUser.getPassword())){
+                return tbUser;
+            }
+        }
+
+        return null;
     }
 }

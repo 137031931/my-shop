@@ -41,4 +41,9 @@ public interface TbUserDao {
      */
 
     List<TbUser> selectByUsername(String username);
+
+    /**
+     * 使用email邮箱查询单个用户
+     */
+    TbUser getByEmail(String email);
 }

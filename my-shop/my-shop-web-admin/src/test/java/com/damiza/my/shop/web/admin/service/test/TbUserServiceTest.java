@@ -68,4 +68,9 @@ public class TbUserServiceTest {
         }
     }
 
+    @Test
+    public void testGetByEmail(){
+        TbUser tbUser = tbUserService.getByEmail("");
+    }
+
 }
