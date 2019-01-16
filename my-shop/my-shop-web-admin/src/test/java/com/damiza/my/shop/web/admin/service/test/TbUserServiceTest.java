@@ -33,8 +33,8 @@ public class TbUserServiceTest {
         tbUser.setUsername("damiaza");
         //密码不能直接显示在数据库里要使用md5加密,因为这里的参数是数组,所以用.getBytes()方法来转换
         tbUser.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
-        tbUser.setPhone("18777777777");
-        tbUser.setEmail("admin@qq.com");
+        tbUser.setPhone("1877777777");
+        tbUser.setEmail("admin@123.com");
         tbUser.setCreated(new Date());
         tbUser.setUpdated(new Date());
         tbUserService.insert(tbUser);
@@ -68,9 +68,13 @@ public class TbUserServiceTest {
         }
     }
 
-    @Test
-    public void testGetByEmail(){
-        TbUser tbUser = tbUserService.getByEmail("");
-    }
+//    @Test
+//    public void testGetByEmail(){
+//        TbUser tbUser = tbUserService.getByEmail("admin@qq.com");
+//    }
 
+    @Test
+    public void testMD5(){
+        System.out.println(DigestUtils.md5DigestAsHex("123456".getBytes()));
+    }
 }

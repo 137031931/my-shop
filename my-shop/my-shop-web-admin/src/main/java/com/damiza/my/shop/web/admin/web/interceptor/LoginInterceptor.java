@@ -1,6 +1,7 @@
 package com.damiza.my.shop.web.admin.web.interceptor;
 
 import com.damiza.my.shop.commons.constant.ConstantUtils;
+import com.damiza.my.shop.domain.TbUser;
 import com.damiza.my.shop.domain.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,9 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginInterceptor implements HandlerInterceptor {
     //这是在拦截之前执行的
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        User user = (User) httpServletRequest.getSession().getAttribute(ConstantUtils.SESSION_USER);
+        TbUser tbUser = (TbUser) httpServletRequest.getSession().getAttribute(ConstantUtils.SESSION_USER);
         //未登录
-        if(user==null){
+        if(tbUser==null){
             httpServletResponse.sendRedirect("/login");
         }
 

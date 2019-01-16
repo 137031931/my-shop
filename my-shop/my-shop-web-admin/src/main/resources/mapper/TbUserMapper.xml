@@ -89,9 +89,11 @@
     </select>
 
     <!-- 登陆校验,用邮箱登录,邮箱查询 -->
-    <select id="getByEmail">
+    <select id="getByEmail" resultType="TbUser">
         SELECT
---           a.id,
+        <include refid="tbUserColumns"/>
+
+        --           a.id,
 --           a.username,
 --           a.password,
 --           a.phone,
