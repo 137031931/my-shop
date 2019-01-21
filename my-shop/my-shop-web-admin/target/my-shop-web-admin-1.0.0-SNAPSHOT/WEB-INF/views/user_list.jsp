@@ -7,7 +7,7 @@
 <html>
 <head>
 
-    <title>我的商城 | 控制面板</title>
+    <title>我的商城 | 用户管理</title>
     <jsp:include page="../includes/header.jsp"/>
 </head>
 
@@ -24,7 +24,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                控制面板
+                用户管理
                 <small></small>
             </h1>
             <ol class="breadcrumb">

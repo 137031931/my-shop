@@ -2,7 +2,6 @@ package com.damiza.my.shop.web.admin.web.controller;
 
 import com.damiza.my.shop.commons.constant.ConstantUtils;
 import com.damiza.my.shop.domain.TbUser;
-import com.damiza.my.shop.domain.User;
 import com.damiza.my.shop.web.admin.service.TbUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
