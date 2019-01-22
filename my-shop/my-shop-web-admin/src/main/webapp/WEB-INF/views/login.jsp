@@ -51,11 +51,11 @@
             <%--</c:if>--%>
 
             <div class="form-group has-feedback">
-                <input name="email" type="email" class="form-control" placeholder="邮箱" value="${email}">
+                <input name="email" type="email" class="form-control" placeholder="邮箱" value="${tbUser.email}">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input name="password" type="password" class="form-control" placeholder="密码" value="${password}">
+                <input name="password" type="password" class="form-control" placeholder="密码" value="${tbUser.password}">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
