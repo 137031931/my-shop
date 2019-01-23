@@ -34,10 +34,10 @@
                             <h3 class="box-title">用户列表</h3>
                             <div class="row" style="padding-left: 12px;padding-top: 10px"></div>
 
-                            <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-user-plus"></i>新增</a>&nbsp;&nbsp;&nbsp;
+                            <a href="/user/form" type="button" class="btn btn-default btn-sm"><i class="fa  fa-plus"></i>新增</a>&nbsp;&nbsp;&nbsp;
                             <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-trash"></i>删除</a>&nbsp;&nbsp;&nbsp;
-                            <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-level-down"></i>导入</a>&nbsp;&nbsp;&nbsp;
-                            <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-level-up"></i>导出</a>
+                            <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-download"></i>导入</a>&nbsp;&nbsp;&nbsp;
+                            <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-upload"></i>导出</a>
 
                             <div class="box-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">

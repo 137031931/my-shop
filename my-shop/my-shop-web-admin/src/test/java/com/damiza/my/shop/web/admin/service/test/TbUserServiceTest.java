@@ -37,7 +37,7 @@ public class TbUserServiceTest {
         tbUser.setEmail("admin@123.com");
         tbUser.setCreated(new Date());
         tbUser.setUpdated(new Date());
-        tbUserService.insert(tbUser);
+        tbUserService.save(tbUser);
     }
 
     @Test

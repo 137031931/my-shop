@@ -43,7 +43,7 @@
         <form action="/login" method="post">
             <%--这里可以用<c:if>标签,不用的话也可以像如下--%>
             <%--<c:if test="${message != null}">--%>
-            <div class="alert alert-danger alert-dismissible" ${message == null ? "style='display:none'":""}>
+            <div class="alert alert-danger alert-dismissible" ${message == null ? "style='display:none;'" : ""}>
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <h4><i class="icon fa fa-ban"></i> 警告</h4>
                 ${message}
@@ -51,18 +51,18 @@
             <%--</c:if>--%>
 
             <div class="form-group has-feedback">
-                <input name="email" type="email" class="form-control" placeholder="邮箱" value="${tbUser.email}">
+                <input name="email" type="email" class="form-control" placeholder="邮箱" value="${email}">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             </div>
             <div class="form-group has-feedback">
-                <input name="password" type="password" class="form-control" placeholder="密码" value="${tbUser.password}">
+                <input name="password" type="password" class="form-control" placeholder="密码" value="${password}">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
             </div>
             <div class="row">
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input name="isChecked" type="checkbox" ${isChecked==true?"checked":""}> 记住我
+                            <input name="isChecked" type="checkbox" ${isChecked==true?"checked" : ""}> 记住我
                         </label>
                         <label>
                             <input type="checkbox"> 自动登录

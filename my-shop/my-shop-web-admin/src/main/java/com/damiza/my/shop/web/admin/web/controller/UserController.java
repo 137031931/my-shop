@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -37,5 +38,19 @@ public class UserController {
     @RequestMapping(value = "form",method = RequestMethod.GET)
     public String form(){
         return "user_form";
+    }
+
+    /**
+     * 跳转时候生效一次所以用RedirectAttributes
+     * 保存用户信息,并给一个提示
+     * @param tbUser
+     * @param redirectAttributes
+     * @return
+     */
+    @RequestMapping(value = "save",method = RequestMethod.POST)
+    public String save(TbUser tbUser, RedirectAttributes redirectAttributes){
+//        redirectAttributes.addFlashAttribute();
+        tbUserService.save(tbUser);
+        return "redirect:/user/list";
     }
 }

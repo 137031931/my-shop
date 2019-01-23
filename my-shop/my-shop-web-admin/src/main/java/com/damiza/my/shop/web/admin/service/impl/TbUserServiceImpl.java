@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
+import java.util.Date;
 import java.util.List;
 @Service
 public class TbUserServiceImpl implements TbUserService {
@@ -20,8 +21,17 @@ public class TbUserServiceImpl implements TbUserService {
     }
 
     @Override
-    public void insert(TbUser tbUser) {
-        tbUserDao.insert(tbUser);
+    public void save(TbUser tbUser) {
+        tbUser.setUpdated(new Date());
+        //新增用户
+        if (tbUser.getId() == null){
+            tbUser.setCreated(new Date());
+            tbUserDao.insert(tbUser);
+        }
+        //编辑用户
+        else {
+            tbUserDao.update(tbUser);
+        }
     }
 
     @Override
@@ -61,5 +71,13 @@ public class TbUserServiceImpl implements TbUserService {
         }
 
         return null;
+    }
+
+    /**
+     * 用户信息的有效性验证
+     * @param tbUser
+     */
+    private void checkTbUser(TbUser tbUser){
+
     }
 }
