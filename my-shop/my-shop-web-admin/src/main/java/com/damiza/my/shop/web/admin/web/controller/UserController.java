@@ -1,5 +1,6 @@
 package com.damiza.my.shop.web.admin.web.controller;
 
+import com.damiza.my.shop.commons.dto.BaseResult;
 import com.damiza.my.shop.domain.TbUser;
 import com.damiza.my.shop.web.admin.service.TbUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,9 +49,20 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "save",method = RequestMethod.POST)
-    public String save(TbUser tbUser, RedirectAttributes redirectAttributes){
-//        redirectAttributes.addFlashAttribute();
-        tbUserService.save(tbUser);
-        return "redirect:/user/list";
+    public String save(TbUser tbUser,Model model, RedirectAttributes redirectAttributes){
+
+        BaseResult baseResult = tbUserService.save(tbUser);
+
+        //保存成功
+        if(baseResult.getStatus() == 200){
+            redirectAttributes.addFlashAttribute("baseResult",baseResult);
+            return "redirect:/user/list";
+        }
+        //保存失败
+        else{
+            model.addAttribute("baseResult",baseResult);
+
+            return "user_form";
+        }
     }
 }

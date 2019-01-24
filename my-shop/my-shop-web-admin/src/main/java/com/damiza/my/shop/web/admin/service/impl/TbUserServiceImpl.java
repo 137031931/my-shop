@@ -1,8 +1,11 @@
 package com.damiza.my.shop.web.admin.service.impl;
 
+import com.damiza.my.shop.commons.dto.BaseResult;
+import com.damiza.my.shop.commons.utils.RegexpUtils;
 import com.damiza.my.shop.domain.TbUser;
 import com.damiza.my.shop.web.admin.dao.TbUserDao;
 import com.damiza.my.shop.web.admin.service.TbUserService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
@@ -21,17 +24,27 @@ public class TbUserServiceImpl implements TbUserService {
     }
 
     @Override
-    public void save(TbUser tbUser) {
-        tbUser.setUpdated(new Date());
-        //新增用户
-        if (tbUser.getId() == null){
-            tbUser.setCreated(new Date());
-            tbUserDao.insert(tbUser);
+    public BaseResult save(TbUser tbUser) {
+        BaseResult baseResult = checkTbUser(tbUser);
+        //如果通过验证
+        if (baseResult.getStatus() == BaseResult.STATUS_SUCCESS){
+            tbUser.setUpdated(new Date());
+            //新增用户
+            if (tbUser.getId() == null){
+                //密码需要加密
+                tbUser.setPassword(DigestUtils.md5DigestAsHex(tbUser.getPassword().getBytes()));
+                tbUser.setCreated(new Date());
+                tbUserDao.insert(tbUser);
+            }
+            //编辑用户
+            else {
+                tbUserDao.update(tbUser);
+            }
+
+            baseResult.setMessage("保存用户信息成功");
         }
-        //编辑用户
-        else {
-            tbUserDao.update(tbUser);
-        }
+
+        return baseResult;
     }
 
     @Override
@@ -77,7 +90,34 @@ public class TbUserServiceImpl implements TbUserService {
      * 用户信息的有效性验证
      * @param tbUser
      */
-    private void checkTbUser(TbUser tbUser){
+    private BaseResult checkTbUser(TbUser tbUser){
+        BaseResult baseResult = BaseResult.success();
+        //非空验证
+       //email不能为空
+        if(StringUtils.isBlank(tbUser.getEmail())){
+            baseResult = BaseResult.fail("邮箱不能为空,请重新输入");
 
+        }
+        else if (!RegexpUtils.checkEmail(tbUser.getEmail())){
+            baseResult = BaseResult.fail("邮箱格式不正确,请重新输入");
+        }
+        //验证
+        else if(StringUtils.isBlank(tbUser.getPassword())){
+            baseResult = BaseResult.fail("密码不能为空,请重新输入");
+
+        }
+        else if (StringUtils.isBlank(tbUser.getUsername())) {
+            baseResult = BaseResult.fail("姓名不能为空,请重新输入");
+            //验证手机号不为空
+        }
+        else if(StringUtils.isBlank(tbUser.getPhone())){
+            baseResult = BaseResult.fail("手机号不能为空,请重新输入");
+
+        }
+        else if (!RegexpUtils.checkPhone(tbUser.getPhone())){
+            baseResult = BaseResult.fail("手机格式不正确,请重新输入");
+        }
+
+        return baseResult;
     }
 }
