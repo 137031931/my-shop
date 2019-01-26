@@ -60,7 +60,7 @@
 
                                     <div class="col-sm-10">
                                         <form:input cssClass="form-control" path="email" placeholder="请输入用户的邮箱"/>
-                                        <span class="help-block">Help block with error</span>
+                                        <span class="help-block">邮箱格式不正确</span>
 
                                     </div>
                                 </div>
@@ -102,11 +102,6 @@
 </div>
 
 <jsp:include page="../includes/footer.jsp"/>
-<script>
 
-    $(function () {
-        Validate.init();
-    });
-</script>
 </body>
 </html>
