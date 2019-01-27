@@ -42,7 +42,7 @@
                     <c:if test="${baseResult != null}">
                         <div class="alert alert-${baseResult.status == 200 ? "success":"danger"} alert-dismissible">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+                            <h4><i class="icon fa fa-ban"></i></h4>
                                 ${baseResult.message}
                         </div>
                     </c:if>
@@ -53,14 +53,14 @@
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
-                        <form:form cssClass="form-horizontal" action="/user/save" method="post" modelAttribute="tbUser">
+                        <form:form id="inputForm" cssClass="form-horizontal" action="/user/save" method="post" modelAttribute="tbUser">
                             <div class="box-body">
                                 <div class="form-group has-error">
                                     <label for="email" class="col-sm-2 control-label">邮箱</label>
 
                                     <div class="col-sm-10">
-                                        <form:input cssClass="form-control" path="email" placeholder="请输入用户的邮箱"/>
-                                        <span class="help-block">邮箱格式不正确</span>
+                                        <form:input cssClass="form-control required email" path="email" placeholder="请输入用户的邮箱"/>
+                                        <span class="help-block">请输入有效的电子侯建地址</span>
 
                                     </div>
                                 </div>
@@ -68,21 +68,21 @@
                                     <label for="password" class="col-sm-2 control-label">密码</label>
 
                                     <div class="col-sm-10">
-                                        <form:password cssClass="form-control" path="password" placeholder="请输入用户的密码"/>
+                                        <form:password cssClass="form-control required" path="password" placeholder="请输入用户的密码"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label">姓名</label>
 
                                     <div class="col-sm-10">
-                                        <form:input cssClass="form-control" path="username" placeholder="请输入用户的姓名"/>
+                                        <form:input cssClass="form-control required" path="username" placeholder="请输入用户的姓名"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="phone" class="col-sm-2 control-label">手机</label>
 
                                     <div class="col-sm-10">
-                                        <form:input cssClass="form-control" path="phone" placeholder="请输入用户的手机号"/>
+                                        <form:input cssClass="form-control required mobile" path="phone" placeholder="请输入用户的手机号"/>
                                     </div>
                                 </div>
                             </div>

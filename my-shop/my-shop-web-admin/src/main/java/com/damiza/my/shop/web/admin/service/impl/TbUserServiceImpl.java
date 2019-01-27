@@ -86,6 +86,15 @@ public class TbUserServiceImpl implements TbUserService {
         return null;
     }
 
+    @Override
+    public List<TbUser> search(String keyword) {
+        TbUser tbUser = new TbUser();
+        tbUser.setUsername(keyword);
+        tbUser.setPhone(keyword);
+        tbUser.setEmail(keyword);
+        return tbUserDao.search(tbUser);
+    }
+
     /**
      * 用户信息的有效性验证
      * @param tbUser

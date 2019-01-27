@@ -46,4 +46,11 @@ public interface TbUserDao {
      * 使用email邮箱查询单个用户
      */
     TbUser getByEmail(String email);
+
+    /**
+     * 搜索功能
+     * @param tbUser
+     * @return
+     */
+    List<TbUser> search(TbUser tbUser);
 }

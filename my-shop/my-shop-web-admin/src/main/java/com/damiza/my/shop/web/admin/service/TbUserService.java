@@ -18,6 +18,18 @@ public interface TbUserService {
 
     List<TbUser> selectByUsername(String username);
 
+    /**
+     * 用户登录
+     * @param email
+     * @param password
+     * @return
+     */
     TbUser login(String email,String password);
 
+    /**
+     * 搜索功能,传一个关键字进来
+     * @param keyword
+     * @return
+     */
+    List<TbUser> search(String keyword);
 }
