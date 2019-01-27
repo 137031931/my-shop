@@ -113,14 +113,14 @@
         FROM
         tb_user AS a
         <where>
-            <if test="username != null and username != '%'">
-                AND a.username LIKE CONCAT('%',#{username},'%')
+            <if test="username != null and username != ''">
+                OR a.username LIKE CONCAT('%',#{username},'%')
             </if>
-            <if test="phone != null and phone != '%'">
-                AND a.phone LIKE CONCAT('%',#{phone},'%')
+            <if test="phone != null and phone != ''">
+                OR a.phone LIKE CONCAT('%',#{phone},'%')
             </if>
-            <if test="email != null and email != '%'">
-                AND a.email LIKE CONCAT('%',#{email},'%')
+            <if test="email != null and email != ''">
+                OR a.email LIKE CONCAT('%',#{email},'%')
             </if>
         </where>
     </select>
