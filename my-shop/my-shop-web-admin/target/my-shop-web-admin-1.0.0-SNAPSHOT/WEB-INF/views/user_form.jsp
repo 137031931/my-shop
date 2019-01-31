@@ -55,13 +55,11 @@
                         <!-- form start -->
                         <form:form id="inputForm" cssClass="form-horizontal" action="/user/save" method="post" modelAttribute="tbUser">
                             <div class="box-body">
-                                <div class="form-group has-error">
+                                <div class="form-group">
                                     <label for="email" class="col-sm-2 control-label">邮箱</label>
 
                                     <div class="col-sm-10">
                                         <form:input cssClass="form-control required email" path="email" placeholder="请输入用户的邮箱"/>
-                                        <span class="help-block">请输入有效的电子侯建地址</span>
-
                                     </div>
                                 </div>
                                 <div class="form-group">

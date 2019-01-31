@@ -87,11 +87,7 @@ public class TbUserServiceImpl implements TbUserService {
     }
 
     @Override
-    public List<TbUser> search(String keyword) {
-        TbUser tbUser = new TbUser();
-        tbUser.setUsername(keyword);
-        tbUser.setPhone(keyword);
-        tbUser.setEmail(keyword);
+    public List<TbUser> search(TbUser tbUser) {
         return tbUserDao.search(tbUser);
     }
 

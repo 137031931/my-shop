@@ -4,6 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--jstl提供的格式化工具--%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
 
@@ -39,24 +40,52 @@
                     <div class="box">
                         <div class="box-header">
                             <h3 class="box-title">用户列表</h3>
-                            <div class="row" style="padding-left: 12px;padding-top: 10px"></div>
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-xs-12">
+                                    <a href="/user/form" type="button" class="btn btn-default btn-sm"><i class="fa  fa-plus"></i>新增</a>&nbsp;&nbsp;&nbsp;
+                                    <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-trash"></i>删除</a>&nbsp;&nbsp;&nbsp;
+                                    <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-download"></i>导入</a>&nbsp;&nbsp;&nbsp;
+                                    <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-upload"></i>导出</a>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 20px;">
+                                <form:form cssClass="form-horizontal" action="/user/search" method="post" modelAttribute="tbUser">
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label for="username" class="col-sm-2 control-label">姓名</label>
 
-                            <a href="/user/form" type="button" class="btn btn-default btn-sm"><i class="fa  fa-plus"></i>新增</a>&nbsp;&nbsp;&nbsp;
-                            <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-trash"></i>删除</a>&nbsp;&nbsp;&nbsp;
-                            <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-download"></i>导入</a>&nbsp;&nbsp;&nbsp;
-                            <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-upload"></i>导出</a>
-
-                            <div class="box-tools">
-                                <form action="/user/search" method="post">
-                                    <div class="input-group input-group-sm" style="width: 150px;">
-                                        <input type="text" name="keyword" class="form-control pull-right" placeholder="搜索">
-
-                                        <div class="input-group-btn">
-                                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                            <div class="col-sm-8">
+                                                <form:input path="username" cssClass="form-control" placeholder="姓名"/>
+                                            </div>
                                         </div>
                                     </div>
-                                </form>
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label for="email" class="col-sm-2 control-label">邮箱</label>
 
+                                            <div class="col-sm-8">
+                                                <form:input path="email" cssClass="form-control" placeholder="邮箱"/>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label for="phone" class="col-sm-2 control-label">手机</label>
+
+                                            <div class="col-sm-8">
+                                                <form:input path="phone" cssClass="form-control" placeholder="手机"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding-right: 70px">
+                                        <div class="col-xs-12">
+                                            <button type="submit" class="btn btn-info pull-right">
+                                                搜索
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form:form>
                             </div>
                         </div>
                         <!-- /.box-header -->

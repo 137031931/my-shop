@@ -28,8 +28,8 @@ public interface TbUserService {
 
     /**
      * 搜索功能,传一个关键字进来
-     * @param keyword
+     * @param tbUser
      * @return
      */
-    List<TbUser> search(String keyword);
+    List<TbUser> search(TbUser tbUser);
 }
