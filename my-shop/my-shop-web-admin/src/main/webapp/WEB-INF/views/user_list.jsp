@@ -148,9 +148,23 @@
 <script>
     $(function () {
         var _masterCheckbox = $('input[type="checkbox"].minimal.icheck_master');
+
         //在页面控制台输出
         // console.log(_masterCheckbox);
         var _checkbox = $('input[type="checkbox"].minimal');
+
+        _masterCheckbox.on("ifClicked",function (e) {
+            //返回true表示为选中
+            if (e.target.checked){
+                _checkbox.iCheck("uncheck");
+
+            }
+
+            //选中状态
+            else{
+                _checkbox.iCheck("check");
+            }
+        })
     })
 </script>
 </body>

@@ -9,15 +9,15 @@ var App = function() {
             checkboxClass: 'icheckbox_minimal-blue',
             radioClass   : 'iradio_minimal-blue'
         })
-    }
+    };
 
     return {
-        init:function () {
+        init: function () {
             handlerInitCheckbox();
         }
     }
-}
+}();
 //导入这个js使其直接生效.
 $(document).ready(function () {
     App.init();
-})
+});

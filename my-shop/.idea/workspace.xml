@@ -7,17 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d528350-ac45-40c9-8279-363ff1ba98ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/src/main/resources/mapper/TbUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/src/main/resources/mapper/TbUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/footer.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/views/user_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/views/user_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/target/classes/mapper/TbUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/target/classes/mapper/TbUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/classes/mapper/TbUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/classes/mapper/TbUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/includes/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/includes/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/includes/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/views/user_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/views/user_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/my-shop-dependencies/target/" />
@@ -63,26 +55,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/footer.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+            <state relative-caret-position="240">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/views/user_list.jsp">
+        <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/footer.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
-              <caret line="152" column="60" selection-start-line="152" selection-start-column="60" selection-end-line="152" selection-end-column="60" />
+              <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/views/user_list.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="929">
+              <caret line="156" column="28" selection-start-line="156" selection-start-column="28" selection-end-line="156" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -90,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="41" />
+            <state relative-caret-position="209">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -223,11 +215,11 @@
         <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/java/com/damiza/my/shop/web/admin/service/impl/TbUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/java/com/damiza/my/shop/web/admin/web/controller/UserController.java" />
         <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/resources/mapper/TbUserMapper.xml" />
-        <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/header.jsp" />
         <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.jsp" />
-        <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.js" />
         <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/footer.jsp" />
         <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/views/user_list.jsp" />
+        <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/header.jsp" />
+        <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.js" />
       </list>
     </option>
   </component>
@@ -268,7 +260,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="775" />
@@ -390,7 +382,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549034782725" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549037682853" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -623,7 +615,7 @@
       <workItem from="1548733582290" duration="2199000" />
       <workItem from="1548860311032" duration="874000" />
       <workItem from="1548925591702" duration="3179000" />
-      <workItem from="1549023164058" duration="5771000" />
+      <workItem from="1549023164058" duration="8570000" />
     </task>
     <servers />
   </component>
@@ -660,7 +652,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155859000" />
+    <option name="totallyTimeSpent" value="158658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -1090,10 +1082,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="240">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/views/user_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="929">
+          <caret line="156" column="28" selection-start-line="156" selection-start-column="28" selection-end-line="156" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -1104,27 +1106,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/includes/footer.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/views/user_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
-          <caret line="152" column="60" selection-start-line="152" selection-start-column="60" selection-end-line="152" selection-end-column="60" />
+          <caret line="46" column="35" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
         </state>
       </provider>
     </entry>
