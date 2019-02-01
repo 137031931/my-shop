@@ -31,6 +31,9 @@
 <%--添加国际化--%>
 <script src="/static/assets/plugins/jquery-validation/js/localization/messages_zh.min.js"></script>
 
+<!-- iCheck 1.0.1 -->
+<script src="/static/assets/plugins/iCheck/icheck.min.js"></script>
+
 <!-- FastClick -->
 <script src="/static/assets/bower_components/fastclick/lib/fastclick.js"></script>
 
@@ -39,3 +42,6 @@
 
 <%--自己做的App级别--%>
 <script src="/static/assets/app/validate.js"></script>
+
+<%--自己做的App级别--%>
+<script src="/static/assets/app/app.js"></script>

@@ -93,6 +93,8 @@
                             <table class="table table-hover">
                                 <thead>
                                 <tr>
+                                    <%--这里自定义类名--%>
+                                    <th><input type="checkbox" class="minimal icheck_master" /></th>
                                     <th>ID</th>
                                     <th>用户名</th>
                                     <th>手机号</th>
@@ -106,6 +108,7 @@
                                 <%--这里用c标签遍历表格,var是别名--%>
                                 <c:forEach items="${tbUsers}" var="tbUser">
                                 <tr>
+                                    <td><input type="checkbox" class="minimal" /></td>
                                     <td>${tbUser.id}</td>
                                     <td>${tbUser.username}</td>
                                     <td>${tbUser.phone}</td>
@@ -142,6 +145,13 @@
 
 <jsp:include page="../includes/footer.jsp"/>
 
-
+<script>
+    $(function () {
+        var _masterCheckbox = $('input[type="checkbox"].minimal.icheck_master');
+        //在页面控制台输出
+        // console.log(_masterCheckbox);
+        var _checkbox = $('input[type="checkbox"].minimal');
+    })
+</script>
 </body>
 </html>
