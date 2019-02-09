@@ -1,5 +1,9 @@
 //初始化对象
 var App = function() {
+
+    var _masterCheckbox;
+    var _checkbox;
+
     /**
      * 私有方法
      */
@@ -10,12 +14,41 @@ var App = function() {
             checkboxClass: 'icheckbox_minimal-blue',
             radioClass   : 'iradio_minimal-blue'
         })
-    };
-    _msterCheckbox =  $('input[type="checkbox"].minimal.icheck_master');
 
+
+    //获取控制端checkbox
+    _masterCheckbox =  $('input[type="checkbox"].minimal.icheck_master');
+
+    //获取全部checkbox
+    _checkbox = $('input[type="checkbox"].minimal');
+
+    };
+
+    //checkbox的全选功能
+    var handlerCheckboxAll =  function () {
+        _masterCheckbox.on("ifClicked",function (e) {
+            //返回true表示为选中
+            if (e.target.checked){
+                _checkbox.iCheck("uncheck");
+
+            }
+
+            //选中状态
+            else{
+                _checkbox.iCheck("check");
+            }
+        });
+    }
+
+    //公共部分
     return {
         init: function () {
             handlerInitCheckbox();
+            handlerCheckboxAll();
+        },
+
+        getCheckbox :function () {
+            return _checkbox;
         }
     }
 }();

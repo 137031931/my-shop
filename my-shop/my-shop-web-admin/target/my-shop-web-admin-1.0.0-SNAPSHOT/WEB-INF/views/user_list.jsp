@@ -37,6 +37,50 @@
                                 ${baseResult.message}
                         </div>
                     </c:if>
+                        <div class="box box-info" >
+                            <div class="box-header">
+                                <h3 class="box-title">高级搜索</h3>
+                            </div>
+                            <form:form class="form-horizontal" action="/user/search" method="post" modelAttribute="tbUser">
+                                <div class="box-body">
+                                    <div class="row">
+                                        <%--这里用两个xs和sm是为了让该标签在超小型设备时候独占一行--%>
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="form-group">
+                                                <label for="username" class="col-sm-4 control-label">姓名</label>
+
+                                                <div class="col-sm-8">
+                                                    <form:input path="username" class="form-control" placeholder="姓名"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <div class="col-xs-12 col-sm-3">
+                                                <div class="form-group">
+                                                    <label for="email" class="col-sm-4 control-label">邮箱</label>
+
+                                                    <div class="col-sm-8">
+                                                        <form:input path="email" class="form-control" placeholder="邮箱"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-3">
+                                                <div class="form-group">
+                                                    <label for="phone" class="col-sm-4 control-label">手机</label>
+
+                                                    <div class="col-sm-8">
+                                                        <form:input path="phone" class="form-control" placeholder="手机"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="box-footer">
+                                    <button type="submit" class="btn btn-info pull-right">搜索</button>
+                                </div>
+                            </form:form>
+                        </div>
+
                     <div class="box">
                         <div class="box-header">
                             <h3 class="box-title">用户列表</h3>
@@ -47,45 +91,6 @@
                                     <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-download"></i>导入</a>&nbsp;&nbsp;&nbsp;
                                     <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-upload"></i>导出</a>
                                 </div>
-                            </div>
-                            <div class="row" style="margin-top: 20px;">
-                                <form:form cssClass="form-horizontal" action="/user/search" method="post" modelAttribute="tbUser">
-                                    <div class="col-xs-3">
-                                        <div class="form-group">
-                                            <label for="username" class="col-sm-2 control-label">姓名</label>
-
-                                            <div class="col-sm-8">
-                                                <form:input path="username" cssClass="form-control" placeholder="姓名"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <div class="form-group">
-                                            <label for="email" class="col-sm-2 control-label">邮箱</label>
-
-                                            <div class="col-sm-8">
-                                                <form:input path="email" cssClass="form-control" placeholder="邮箱"/>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-3">
-                                        <div class="form-group">
-                                            <label for="phone" class="col-sm-2 control-label">手机</label>
-
-                                            <div class="col-sm-8">
-                                                <form:input path="phone" cssClass="form-control" placeholder="手机"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row" style="padding-right: 70px">
-                                        <div class="col-xs-12">
-                                            <button type="submit" class="btn btn-info pull-right">
-                                                搜索
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form:form>
                             </div>
                         </div>
                         <!-- /.box-header -->
@@ -108,7 +113,7 @@
                                 <%--这里用c标签遍历表格,var是别名--%>
                                 <c:forEach items="${tbUsers}" var="tbUser">
                                 <tr>
-                                    <td><input type="checkbox" class="minimal" /></td>
+                                    <td><input id="${tbUser.id}" type="checkbox" class="minimal" /></td>
                                     <td>${tbUser.id}</td>
                                     <td>${tbUser.username}</td>
                                     <td>${tbUser.phone}</td>
@@ -147,24 +152,15 @@
 
 <script>
     $(function () {
-        var _masterCheckbox = $('input[type="checkbox"].minimal.icheck_master');
-
-        //在页面控制台输出
-        // console.log(_masterCheckbox);
-        var _checkbox = $('input[type="checkbox"].minimal');
-
-        _masterCheckbox.on("ifClicked",function (e) {
-            //返回true表示为选中
-            if (e.target.checked){
-                _checkbox.iCheck("uncheck");
-
-            }
-
-            //选中状态
-            else{
-                _checkbox.iCheck("check");
-            }
-        })
+        // var _masterCheckbox = $('input[type="checkbox"].minimal.icheck_master');
+        //
+        // //在页面控制台输出
+        // // console.log(_masterCheckbox);
+        // var _checkbox = $('input[type="checkbox"].minimal');
+        //
+        //
+        var _checkbox = App.getCheckbox();
+        //console.log(_checkbox.length);
     })
 </script>
 </body>
