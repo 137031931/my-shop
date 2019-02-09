@@ -163,6 +163,10 @@
         //
         var _checkbox = App.getCheckbox();
         //console.log(_checkbox.length);
+        //便利checkbox
+        _checkbox.each(function () {
+            
+        })
     })
 </script>
 </body>
