@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cef3b85-9ee6-4907-bd96-82f6b28e5347" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/views/user_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/views/user_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/static/assets/app/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/my-shop-dependencies/target/" />
@@ -29,9 +27,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/views/user_list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+            <state relative-caret-position="498">
+              <caret line="93" column="214" selection-start-line="93" selection-start-column="214" selection-end-line="93" selection-end-column="214" />
               <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#4205#4211#0#HTML" expanded="true" />
                 <element signature="e#4211#4217#0#HTML" expanded="true" />
@@ -42,6 +41,9 @@
                 <element signature="e#4500#4506#0#HTML" expanded="true" />
                 <element signature="e#4506#4512#0#HTML" expanded="true" />
                 <element signature="e#4512#4518#0#HTML" expanded="true" />
+                <element signature="e#5034#5040#0#HTML" expanded="true" />
+                <element signature="e#5040#5046#0#HTML" expanded="true" />
+                <element signature="e#5046#5052#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,7 +79,7 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-48" />
     <option name="y" value="342" />
     <option name="width" value="1750" />
@@ -192,7 +194,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549726999445" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549727712453" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -324,7 +326,7 @@
       <option name="presentableId" value="Default" />
       <updated>1549637214422</updated>
       <workItem from="1549637225441" duration="3096000" />
-      <workItem from="1549681792491" duration="12221000" />
+      <workItem from="1549681792491" duration="12940000" />
     </task>
     <servers />
   </component>
@@ -337,7 +339,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15317000" />
+    <option name="totallyTimeSpent" value="16036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -405,9 +407,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/webapp/WEB-INF/views/user_list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+        <state relative-caret-position="498">
+          <caret line="93" column="214" selection-start-line="93" selection-start-column="214" selection-end-line="93" selection-end-column="214" />
           <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#4205#4211#0#HTML" expanded="true" />
             <element signature="e#4211#4217#0#HTML" expanded="true" />
@@ -418,6 +421,9 @@
             <element signature="e#4500#4506#0#HTML" expanded="true" />
             <element signature="e#4506#4512#0#HTML" expanded="true" />
             <element signature="e#4512#4518#0#HTML" expanded="true" />
+            <element signature="e#5034#5040#0#HTML" expanded="true" />
+            <element signature="e#5040#5046#0#HTML" expanded="true" />
+            <element signature="e#5046#5052#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

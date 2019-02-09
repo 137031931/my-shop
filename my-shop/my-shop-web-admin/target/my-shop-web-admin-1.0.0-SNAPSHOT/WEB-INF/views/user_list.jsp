@@ -37,7 +37,8 @@
                                 ${baseResult.message}
                         </div>
                     </c:if>
-                        <div class="box box-info" >
+                    <%--定义类box-info-search，后面用类选择器--%>
+                        <div class="box box-info box-info-search" style="display: none;" >
                             <div class="box-header">
                                 <h3 class="box-title">高级搜索</h3>
                             </div>
@@ -89,7 +90,8 @@
                                     <a href="/user/form" type="button" class="btn btn-default btn-sm"><i class="fa  fa-plus"></i>新增</a>&nbsp;&nbsp;&nbsp;
                                     <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-trash"></i>删除</a>&nbsp;&nbsp;&nbsp;
                                     <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-download"></i>导入</a>&nbsp;&nbsp;&nbsp;
-                                    <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-upload"></i>导出</a>
+                                    <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-upload"></i>导出</a>&nbsp;&nbsp;&nbsp;
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="$('.box-info-search').css('display')== 'none'?$('.box-info-search').show('fast'):$('.box-info-search').hide('fast')"><i class="fa  fa-upload"></i>搜索</button>
                                 </div>
                             </div>
                         </div>
