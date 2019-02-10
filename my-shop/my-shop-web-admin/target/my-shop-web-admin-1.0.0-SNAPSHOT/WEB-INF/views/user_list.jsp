@@ -5,6 +5,8 @@
 <%--jstl提供的格式化工具--%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="sys" tagdir="/WEB-INF/tags/sys" %>
+
 <html>
 <head>
 
@@ -88,7 +90,7 @@
                             <div class="row" style="margin-top: 20px;">
                                 <div class="col-xs-12">
                                     <a href="/user/form" type="button" class="btn btn-default btn-sm"><i class="fa  fa-plus"></i>新增</a>&nbsp;&nbsp;&nbsp;
-                                    <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-trash"></i>删除</a>&nbsp;&nbsp;&nbsp;
+                                    <a href="#" type="button" class="btn btn-default btn-sm" onclick="deleteMulti();"><i class="fa  fa-trash"></i>删除</a>&nbsp;&nbsp;&nbsp;
                                     <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-download"></i>导入</a>&nbsp;&nbsp;&nbsp;
                                     <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-upload"></i>导出</a>&nbsp;&nbsp;&nbsp;
                                     <button type="button" class="btn btn-primary btn-sm" onclick="$('.box-info-search').css('display')== 'none'?$('.box-info-search').show('fast'):$('.box-info-search').hide('fast')"><i class="fa  fa-upload"></i>搜索</button>
@@ -136,6 +138,9 @@
                     <!-- /.box -->
                 </div>
             </div>
+
+
+            <!-- /.modal -->
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
                 <li class="active">控制面板</li>
@@ -150,20 +155,41 @@
     <jsp:include page="../includes/copyright.jsp"/>
 </div>
 
+
 <jsp:include page="../includes/footer.jsp"/>
 
+<sys:modal message="第一个模态框" opts="confirm" url="/user/delete"/>
+
 <script>
-    $(function () {
+
+
+    /**
+     * 批量删除
+     */
+    function deleteMulti() {
         // var _masterCheckbox = $('input[type="checkbox"].minimal.icheck_master');
         //
         // //在页面控制台输出
         // // console.log(_masterCheckbox);
         // var _checkbox = $('input[type="checkbox"].minimal');
-        //
-        //
+        //定义一个存放id的数组
+        var idArray = new Array();
+
+        //将选中元素加入数组
         var _checkbox = App.getCheckbox();
         //console.log(_checkbox.length);
-    })
+        //便利checkbox
+        _checkbox.each(function () {
+            var _id = $(this).attr("id")
+            if(_id != null && _id != "undefine" && $(this).is(":checked")){
+                idArray.push(_id);
+            }
+        });
+
+        if(idArray.length === 0){
+            $('#modal-default').modal("show");
+        }
+    }
 </script>
 </body>
 </html>
