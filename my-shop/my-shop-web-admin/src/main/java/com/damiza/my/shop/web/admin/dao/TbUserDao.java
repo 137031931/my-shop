@@ -53,4 +53,9 @@ public interface TbUserDao {
      * @return
      */
     List<TbUser> search(TbUser tbUser);
+
+    /**
+     * 批量删除功能
+     */
+    void deleteMulti(String[] ids);
 }

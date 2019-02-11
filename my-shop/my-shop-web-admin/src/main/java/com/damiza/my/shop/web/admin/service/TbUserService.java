@@ -32,4 +32,10 @@ public interface TbUserService {
      * @return
      */
     List<TbUser> search(TbUser tbUser);
+
+    /**
+     * 批量删除
+     * @param ids
+     */
+    void deleteMulti(String[] ids);
 }

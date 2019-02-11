@@ -3,6 +3,7 @@ package com.damiza.my.shop.web.admin.web.controller;
 import com.damiza.my.shop.commons.dto.BaseResult;
 import com.damiza.my.shop.domain.TbUser;
 import com.damiza.my.shop.web.admin.service.TbUserService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -98,8 +99,17 @@ public class UserController {
     @ResponseBody
     @RequestMapping(value = "delete",method = RequestMethod.POST)
     public BaseResult delete(String ids){
-        BaseResult baseResult = new BaseResult();
-        System.out.println(ids);
+        BaseResult baseResult = null;
+
+        if(StringUtils.isNotBlank(ids)){
+            String[] idArray = ids.split(",");
+            tbUserService.deleteMulti(idArray);
+            baseResult = BaseResult.success("删除用户成功");
+        }
+
+        else {
+            baseResult = BaseResult.fail("删除用户失败");
+        }
         return baseResult;
     }
 }
