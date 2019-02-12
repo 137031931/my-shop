@@ -103,6 +103,7 @@ var App = function() {
                             //删除成功
                             if(data.status === 200){
                                 window.location.reload();
+                                window.alert("删除成功")
                             }
                             //删除失败
                             else {
