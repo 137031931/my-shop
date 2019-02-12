@@ -133,4 +133,15 @@
             #{id}
         </foreach>
     </delete>
+
+    <select id="page" resultType="TbUser" parameterType="java.util.Map">
+        SELECT
+        <include refid="tbUserColumns"/>
+        FROM
+        tb_user AS a LIMIT #{start},#{length}
+    </select>
+
+    <!--查询总比sh    <select id="count" resultType="java.lang.Integer">
+        SELECT COUNT (*) FROM tb_user
+    </select>
 </mapper>

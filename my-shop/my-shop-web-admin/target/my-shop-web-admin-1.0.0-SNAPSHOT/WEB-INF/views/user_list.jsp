@@ -112,24 +112,24 @@
                                 </thead>
 
                                 <tbody>
-                                <c:forEach items="${tbUsers}" var="tbUser">
-                                    <tr>
-                                        <td><input id="${tbUser.id}" type="checkbox" class="minimal"/></td>
-                                        <td>${tbUser.id}</td>
-                                        <td>${tbUser.username}</td>
-                                        <td>${tbUser.phone}</td>
-                                        <td>${tbUser.email}</td>
-                                        <td><fmt:formatDate value="${tbUser.updated}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
-                                        <td>
-                                            <a href="#" type="button" class="btn btn-default btn-sm"><i
-                                                    class="fa fa-search"></i>查看</a>
-                                            <a href="#" type="button" class="btn btn-primary btn-sm"><i
-                                                    class="fa fa-edit">编辑</i></a>
-                                            <a href="#" type="button" class="btn btn-danger btn-sm"><i
-                                                    class="fa  fa-trash">删除</i></a>
-                                        </td>
-                                    </tr>
-                                </c:forEach>
+                                <%--<c:forEach items="${tbUsers}" var="tbUser">--%>
+                                    <%--<tr>--%>
+                                        <%--<td><input id="${tbUser.id}" type="checkbox" class="minimal"/></td>--%>
+                                        <%--<td>${tbUser.id}</td>--%>
+                                        <%--<td>${tbUser.username}</td>--%>
+                                        <%--<td>${tbUser.phone}</td>--%>
+                                        <%--<td>${tbUser.email}</td>--%>
+                                        <%--<td><fmt:formatDate value="${tbUser.updated}" pattern="yyyy-MM-dd HH:mm:ss"/></td>--%>
+                                        <%--<td>--%>
+                                            <%--<a href="#" type="button" class="btn btn-default btn-sm"><i--%>
+                                                    <%--class="fa fa-search"></i>查看</a>--%>
+                                            <%--<a href="#" type="button" class="btn btn-primary btn-sm"><i--%>
+                                                    <%--class="fa fa-edit">编辑</i></a>--%>
+                                            <%--<a href="#" type="button" class="btn btn-danger btn-sm"><i--%>
+                                                    <%--class="fa  fa-trash">删除</i></a>--%>
+                                        <%--</td>--%>
+                                    <%--</tr>--%>
+                                <%--</c:forEach>--%>
                                 </tbody>
                             </table>
                         </div>
@@ -164,15 +164,17 @@
 <script>
   $(function () {
       $("#dataTable").DataTable({
-          "padding":true,
+          "paging":true,
           "info":false,
           "lengthChange":false,
           "ordering":false,
           "processing":true,
           "searching":false,
           "serverSide":true,
-          "ajax":"xhr.php",
           "deferRender":true,
+          "ajax":{
+              "url":"/user/page"
+          }
       });
   });
 </script>

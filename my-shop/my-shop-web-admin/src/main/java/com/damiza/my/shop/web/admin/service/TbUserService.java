@@ -38,4 +38,18 @@ public interface TbUserService {
      * @param ids
      */
     void deleteMulti(String[] ids);
+
+    /**
+     * 分页查询
+     * @param start
+     * @param length
+     * @return
+     */
+    List<TbUser> page(int start,int length);
+
+    /**
+     * 查询总笔数
+     * @return
+     */
+    int count();
 }
