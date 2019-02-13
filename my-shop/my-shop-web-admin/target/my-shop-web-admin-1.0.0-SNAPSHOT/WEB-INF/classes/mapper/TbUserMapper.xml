@@ -141,7 +141,8 @@
         tb_user AS a LIMIT #{start},#{length}
     </select>
 
-    <!--查询总比sh    <select id="count" resultType="java.lang.Integer">
-        SELECT COUNT (*) FROM tb_user
+    <!--查询总比数 -->
+    <select id="count" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM tb_user
     </select>
 </mapper>

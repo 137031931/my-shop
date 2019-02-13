@@ -165,7 +165,7 @@
   $(function () {
       $("#dataTable").DataTable({
           "paging":true,
-          "info":false,
+          "info":true,
           "lengthChange":false,
           "ordering":false,
           "processing":true,
@@ -174,6 +174,53 @@
           "deferRender":true,
           "ajax":{
               "url":"/user/page"
+          },
+
+          "columns":[
+          {
+              "data":function (row,type,val,meta) {
+                  return '<input id="'+row.id+'" type="checkbox" class="minimal"/>'
+              }
+          },
+              {"data":"id"},
+              {"data":"username"},
+              {"data":"phone"},
+              {"data":"email"},
+              {"data":"updated"},
+              {
+                  "data":function (row,type,val,meta) {
+                      return '<a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-search"></i>查看</a>&nbsp;&nbsp;&nbsp;'+
+                             '<a href="#" type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit">编辑</i></a>&nbsp;&nbsp;&nbsp;'+
+                             '<a href="#" type="button" class="btn btn-danger btn-sm"><i class="fa  fa-trash">删除</i></a>';
+                  }
+              }
+          ],
+          language: {
+              "sProcessing": "处理中...",
+              "sLengthMenu": "显示 _MENU_ 项结果",
+              "sZeroRecords": "没有匹配结果",
+              "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+              "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+              "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+              "sInfoPostFix": "",
+              "sSearch": "搜索:",
+              "sUrl": "",
+              "sEmptyTable": "表中数据为空",
+              "sLoadingRecords": "载入中...",
+              "sInfoThousands": ",",
+              "oPaginate": {
+                  "sFirst": "首页",
+                  "sPrevious": "上页",
+                  "sNext": "下页",
+                  "sLast": "末页"
+              },
+              "oAria": {
+                  "sSortAscending": ": 以升序排列此列",
+                  "sSortDescending": ": 以降序排列此列"
+              }
+          },
+          "drawCallback": function( settings ) {
+              App.init();
           }
       });
   });
