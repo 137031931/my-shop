@@ -1,6 +1,7 @@
 package com.damiza.my.shop.web.admin.service.impl;
 
 import com.damiza.my.shop.commons.dto.BaseResult;
+import com.damiza.my.shop.commons.dto.PageInfo;
 import com.damiza.my.shop.commons.utils.RegexpUtils;
 import com.damiza.my.shop.domain.TbUser;
 import com.damiza.my.shop.web.admin.dao.TbUserDao;
@@ -100,11 +101,22 @@ public class TbUserServiceImpl implements TbUserService {
     }
 
     @Override
-    public List<TbUser> page(int start, int length) {
+    public PageInfo<TbUser> page(int start, int length, int draw) {
+
+        int count = tbUserDao.count();
+
         Map<String,Object> params = new HashMap<>();
         params.put("start",start);
         params.put("length",length);
-        return tbUserDao.page(params);
+
+        PageInfo<TbUser> pageInfo = new PageInfo<>();
+        pageInfo.setDraw(draw);
+        pageInfo.setRecordsTotal(count);
+        pageInfo.setRecordsFiltered(count);
+        pageInfo.setData(tbUserDao.page(params));
+
+
+        return pageInfo;
     }
 
     @Override

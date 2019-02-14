@@ -1,6 +1,7 @@
 package com.damiza.my.shop.web.admin.web.controller;
 
 import com.damiza.my.shop.commons.dto.BaseResult;
+import com.damiza.my.shop.commons.dto.PageInfo;
 import com.damiza.my.shop.domain.TbUser;
 import com.damiza.my.shop.web.admin.service.TbUserService;
 import org.apache.commons.lang3.StringUtils;
@@ -46,11 +47,7 @@ public class UserController {
      * @return
      */
     @RequestMapping(value = "list",method = RequestMethod.GET)
-    public String list(Model model){
-        List<TbUser> tbUsers = tbUserService.selectAll();
-        model.addAttribute("tbUsers",tbUsers);
-
-
+    public String list(){
         return "user_list";
     }
 
@@ -124,7 +121,7 @@ public class UserController {
      */
     @ResponseBody
     @RequestMapping(value = "page",method = RequestMethod.GET)
-    public Map<String,Object> page(HttpServletRequest request){
+    public PageInfo<TbUser> page(HttpServletRequest request){
         Map<String,Object> result = new HashMap<>();
         String strDraw = request.getParameter("draw");
         String strStart = request.getParameter("start");
@@ -134,17 +131,20 @@ public class UserController {
         int start = strStart == null ? 0 :Integer.parseInt(strStart);
         int length = strLength == null ? 10 :Integer.parseInt(strLength);
 
-        List<TbUser> tbUsers = tbUserService.page(start,length);
         //封装dataTables需要的结果
-        int count = tbUserService.count();
-        result.put("draw",draw);
-        //总笔数
-        result.put("recordsTotal", count);
-        //过滤后笔数,我们没有过滤条件所以等于上面
-        result.put("recordsFiltered",count);
-        result.put("data",tbUsers);
-        result.put("error","");
-        return result;
+        PageInfo<TbUser> pageInfo = tbUserService.page(start, length, draw);
+        return pageInfo;
+    }
+
+    /**
+     * 显示用户详情
+     * @param tbUser
+     * @return
+     */
+    @RequestMapping(value = "detail",method = RequestMethod.GET)
+    public String detail(TbUser tbUser){
+        System.out.println(tbUser.getEmail());
+        return "user_detail";
     }
 
 }

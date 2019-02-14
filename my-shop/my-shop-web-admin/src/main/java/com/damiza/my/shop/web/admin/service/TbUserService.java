@@ -1,6 +1,7 @@
 package com.damiza.my.shop.web.admin.service;
 
 import com.damiza.my.shop.commons.dto.BaseResult;
+import com.damiza.my.shop.commons.dto.PageInfo;
 import com.damiza.my.shop.domain.TbUser;
 
 import java.util.List;
@@ -45,7 +46,7 @@ public interface TbUserService {
      * @param length
      * @return
      */
-    List<TbUser> page(int start,int length);
+    PageInfo<TbUser> page(int start, int length,int draw);
 
     /**
      * 查询总笔数
