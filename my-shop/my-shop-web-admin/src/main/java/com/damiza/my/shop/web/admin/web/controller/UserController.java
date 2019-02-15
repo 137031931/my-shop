@@ -85,12 +85,12 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "search",method = RequestMethod.POST)
-    public String search(TbUser tbUser,Model model){
-        List<TbUser> tbUsers = tbUserService.search(tbUser);
-        model.addAttribute("tbUsers",tbUsers);
-        return  "user_list";
-    }
+//    @RequestMapping(value = "search",method = RequestMethod.POST)
+//    public String search(TbUser tbUser,Model model){
+//        List<TbUser> tbUsers = tbUserService.search(tbUser);
+//        model.addAttribute("tbUsers",tbUsers);
+//        return  "user_list";
+//    }
 
     /**
      * 删除用户信息
@@ -121,7 +121,7 @@ public class UserController {
      */
     @ResponseBody
     @RequestMapping(value = "page",method = RequestMethod.GET)
-    public PageInfo<TbUser> page(HttpServletRequest request){
+    public PageInfo<TbUser> page(HttpServletRequest request,TbUser tbUser){
         Map<String,Object> result = new HashMap<>();
         String strDraw = request.getParameter("draw");
         String strStart = request.getParameter("start");
@@ -132,7 +132,7 @@ public class UserController {
         int length = strLength == null ? 10 :Integer.parseInt(strLength);
 
         //封装dataTables需要的结果
-        PageInfo<TbUser> pageInfo = tbUserService.page(start, length, draw);
+        PageInfo<TbUser> pageInfo = tbUserService.page(start, length, draw,tbUser);
         return pageInfo;
     }
 

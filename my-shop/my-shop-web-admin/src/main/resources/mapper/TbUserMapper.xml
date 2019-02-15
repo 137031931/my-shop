@@ -77,16 +77,16 @@
         WHERE id = #{id};
     </update>
 
-    <!-- 根据用户名模糊查询 -->
-    <select id="selectByUsername" resultType="TbUser">
-        SELECT
-        <include refid="tbUserColumns"/>
-        FROM
-          tb_user AS a
-        WHERE
-          a.username LIKE CONCAT('%',#{username},'%')
+    <!--&lt;!&ndash; 根据用户名模糊查询 &ndash;&gt;-->
+    <!--<select id="selectByUsername" resultType="TbUser">-->
+        <!--SELECT-->
+        <!--<include refid="tbUserColumns"/>-->
+        <!--FROM-->
+          <!--tb_user AS a-->
+        <!--WHERE-->
+          <!--a.username LIKE CONCAT('%',#{username},'%')-->
 
-    </select>
+    <!--</select>-->
 
     <!-- 登陆校验,用邮箱登录,邮箱查询 -->
     <select id="getByEmail" resultType="TbUser">
@@ -107,23 +107,24 @@
 
     </select>
 
-    <select id="search" resultType="TbUser">
-        SELECT
-        <include refid="tbUserColumns"/>
-        FROM
-        tb_user AS a
-        <where>
-            <if test="username != null and username != ''">
-                AND a.username LIKE CONCAT('%',#{username},'%')
-            </if>
-            <if test="phone != null and phone != ''">
-                AND a.phone LIKE CONCAT('%',#{phone},'%')
-            </if>
-            <if test="email != null and email != ''">
-                AND a.email LIKE CONCAT('%',#{email},'%')
-            </if>
-        </where>
-    </select>
+    <!--使用jsp时候的搜索-->
+    <!--<select id="search" resultType="TbUser">-->
+        <!--SELECT-->
+        <!--<include refid="tbUserColumns"/>-->
+        <!--FROM-->
+        <!--tb_user AS a-->
+        <!--<where>-->
+            <!--<if test="username != null and username != ''">-->
+                <!--AND a.username LIKE CONCAT('%',#{username},'%')-->
+            <!--</if>-->
+            <!--<if test="phone != null and phone != ''">-->
+                <!--AND a.phone LIKE CONCAT('%',#{phone},'%')-->
+            <!--</if>-->
+            <!--<if test="email != null and email != ''">-->
+                <!--AND a.email LIKE CONCAT('%',#{email},'%')-->
+            <!--</if>-->
+        <!--</where>-->
+    <!--</select>-->
 
     <!--批量删除-->
     <delete id="deleteMulti">
@@ -138,11 +139,34 @@
         SELECT
         <include refid="tbUserColumns"/>
         FROM
-        tb_user AS a LIMIT #{start},#{length}
+        tb_user AS a
+        <where>
+            <if test="tbUser.username != null and tbUser.username != '' ">
+                AND a.username LIKE  CONCAT('%',#{tbUser.username},'%')
+            </if>
+            <if test="tbUser.phone != null and tbUser.phone != '' ">
+                AND a.phone LIKE  CONCAT('%',#{tbUser.phone},'%')
+            </if>
+            <if test="tbUser.email != null and tbUser.email != '' ">
+                AND a.email LIKE  CONCAT('%',#{tbUser.email},'%')
+            </if>
+        </where>
+        LIMIT #{start},#{length}
     </select>
 
     <!--查询总比数 -->
     <select id="count" resultType="java.lang.Integer">
-        SELECT COUNT(*) FROM tb_user
+        SELECT COUNT(*) FROM tb_user AS a
+        <where>
+            <if test="username != null and username != '' ">
+                AND a.username LIKE  CONCAT('%',#{username},'%')
+            </if>
+            <if test="phone != null and phone != '' ">
+                AND a.phone LIKE  CONCAT('%',#{phone},'%')
+            </if>
+            <if test="email != null and email != '' ">
+                AND a.email LIKE  CONCAT('%',#{email},'%')
+            </if>
+        </where>
     </select>
 </mapper>

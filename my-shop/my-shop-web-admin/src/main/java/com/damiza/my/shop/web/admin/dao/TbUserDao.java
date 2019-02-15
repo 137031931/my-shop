@@ -37,23 +37,23 @@ public interface TbUserDao {
      */
     void update(TbUser tbUser);
 
-    /**
-     * 模糊查询
-     */
-
-    List<TbUser> selectByUsername(String username);
+//    /**
+//     * 模糊查询
+//     */
+//
+//    List<TbUser> selectByUsername(String username);
 
     /**
      * 使用email邮箱查询单个用户
      */
     TbUser getByEmail(String email);
 
-    /**
-     * 搜索功能
-     * @param tbUser
-     * @return
-     */
-    List<TbUser> search(TbUser tbUser);
+//    /**
+//     * 搜索功能
+//     * @param tbUser
+//     * @return
+//     */
+//    List<TbUser> search(TbUser tbUser);
 
     /**
      * 批量删除功能
@@ -71,5 +71,5 @@ public interface TbUserDao {
      * 查询总笔数
      * @return
      */
-    int count();
+    int count(TbUser tbUser);
 }

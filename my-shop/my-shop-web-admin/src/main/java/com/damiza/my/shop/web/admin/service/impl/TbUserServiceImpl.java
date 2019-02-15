@@ -66,10 +66,10 @@ public class TbUserServiceImpl implements TbUserService {
         tbUserDao.update(tbUser);
     }
 
-    @Override
-    public List<TbUser> selectByUsername(String username) {
-        return tbUserDao.selectByUsername(username);
-    }
+//    @Override
+//    public List<TbUser> selectByUsername(String username) {
+//        return tbUserDao.selectByUsername(username);
+//    }
 
     @Override
     public TbUser login(String email,String password) {
@@ -90,10 +90,10 @@ public class TbUserServiceImpl implements TbUserService {
         return null;
     }
 
-    @Override
-    public List<TbUser> search(TbUser tbUser) {
-        return tbUserDao.search(tbUser);
-    }
+//    @Override
+//    public List<TbUser> search(TbUser tbUser) {
+//        return tbUserDao.search(tbUser);
+//    }
 
     @Override
     public void deleteMulti(String[] ids) {
@@ -101,13 +101,14 @@ public class TbUserServiceImpl implements TbUserService {
     }
 
     @Override
-    public PageInfo<TbUser> page(int start, int length, int draw) {
+    public PageInfo<TbUser> page(int start, int length, int draw,TbUser tbUser) {
 
-        int count = tbUserDao.count();
+        int count = tbUserDao.count(tbUser);
 
         Map<String,Object> params = new HashMap<>();
         params.put("start",start);
         params.put("length",length);
+        params.put("tbUser",tbUser);
 
         PageInfo<TbUser> pageInfo = new PageInfo<>();
         pageInfo.setDraw(draw);
@@ -120,8 +121,8 @@ public class TbUserServiceImpl implements TbUserService {
     }
 
     @Override
-    public int count() {
-        return tbUserDao.count();
+    public int count(TbUser tbUser) {
+        return tbUserDao.count(tbUser);
     }
 
     /**

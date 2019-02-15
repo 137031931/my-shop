@@ -7,17 +7,39 @@ import com.damiza.my.shop.domain.TbUser;
 import java.util.List;
 
 public interface TbUserService {
+    /**
+     * 查询全部
+     * @return
+     */
     public List<TbUser> selectAll();
 
+    /**
+     * 保存用户信息
+     * @param tbUser
+     * @return
+     */
     BaseResult save(TbUser tbUser);
 
+    /**
+     * 删除用户信息
+     * @param id
+     */
     void delete(Long id);
 
+    /**
+     * 根据id获取用户信息
+     * @param id
+     * @return
+     */
     TbUser getById(Long id);
 
+    /**
+     * 跟新用户信息
+     * @param tbUser
+     */
     void update(TbUser tbUser);
 
-    List<TbUser> selectByUsername(String username);
+//    List<TbUser> selectByUsername(String username);
 
     /**
      * 用户登录
@@ -27,12 +49,12 @@ public interface TbUserService {
      */
     TbUser login(String email,String password);
 
-    /**
-     * 搜索功能,传一个关键字进来
-     * @param tbUser
-     * @return
-     */
-    List<TbUser> search(TbUser tbUser);
+//    /**
+//     * 搜索功能,传一个关键字进来
+//     * @param tbUser
+//     * @return
+//     */
+//    List<TbUser> search(TbUser tbUser);
 
     /**
      * 批量删除
@@ -46,11 +68,11 @@ public interface TbUserService {
      * @param length
      * @return
      */
-    PageInfo<TbUser> page(int start, int length,int draw);
+    PageInfo<TbUser> page(int start, int length,int draw,TbUser tbUser);
 
     /**
      * 查询总笔数
      * @return
      */
-    int count();
+    int count(TbUser tbUser);
 }

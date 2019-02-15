@@ -61,18 +61,23 @@ var App = function() {
             }
         });
 
+        /**
+         * 判断用户是否选择了数据项
+         */
         if(_idArray.length === 0){
             $('#modal-message').html("您还没有选择任何数据项,至少选择一项");
 
         }
+
         else{
 
             $('#modal-message').html("您确定要删除吗");
 
         }
-
+        //点击删除按钮时候弹出模态框
         $('#modal-default').modal("show");
 
+        //选择确定删除调用删除方法
         $("#btnModalOk").bind("click",function () {
             del();
         });
@@ -100,21 +105,28 @@ var App = function() {
                         "data":{"ids":_idArray.toString()},
                         "dataType":"JSON",
                         "success":function (data) {
+                            //请求成功与否都要弹出模态框,所以这里要先解绑原来的click事件
+                            $("#btnModalOk").unbind("click");
+
                             //删除成功
                             if(data.status === 200){
-                                window.location.reload();
-                                window.alert("删除成功")
+                                $("#btnModalOk").bind("click",function () {
+                                    //刷新页面
+                                    window.location.reload();
+                                });
                             }
                             //删除失败
                             else {
-                                $("#btnModalOk").unbind("click");
+                                //确定按钮的事件改为隐藏模态框
                                 $("#btnModalOk").bind("click",function () {
                                     $('#modal-default').modal("hide");
                                 });
-                                $('#modal-message').html(data.message);
-                                $('#modal-default').modal("show");
 
                             }
+                            //因为无论如何都要提示信息,所以模态框是必须调用的
+                            $('#modal-message').html(data.message);
+                            $('#modal-default').modal("show");
+
                         }
                     });
                 },500);
@@ -128,7 +140,7 @@ var App = function() {
      * 初始化dataTables
      */
     var handlerInitDataTables = function (url,columns) {
-        $("#dataTable").DataTable({
+        var _dataTable = $("#dataTable").DataTable({
             "paging":true,
             "info":true,
             "lengthChange":false,
@@ -172,24 +184,62 @@ var App = function() {
                 handlerCheckboxAll();
             }
         });
-    }
+
+        return _dataTable;
+    };
+
+    /**
+     * 查看详情
+     * @param url
+     */
+    var handlerShowDetail = function (url) {
+        //这里通过Ajax请求html的方式将JSP装载进模态框中
+        $.ajax({
+            url:url,
+            type:"get",
+            dataType:"html",
+            success:function (data) {
+                $("#modal-detail-body").html(data);
+                $("#modal-detail").modal("show");
+
+            }
+        });
+    };
 
     //公共部分
     return {
+        /**
+         * 初始化
+         */
         init: function () {
             handlerInitCheckbox();
             handlerCheckboxAll();
         },
 
-        getCheckbox :function () {
-            return _checkbox;
-        },
-
+        /**
+         * 批量删除
+         * @param url
+         */
         deleteMulti:function (url) {
             handlerDeleteMulti(url);
         },
+
+        /**
+         * 初始化dataTables
+         * @param url
+         * @param columns
+         * @returns {jQuery|*}
+         */
         initDataTables:function (url,columns) {
-            handlerInitDataTables(url,columns);
+            return handlerInitDataTables(url,columns);
+        },
+
+        /**
+         * 显示详情
+         * @param url
+         */
+        showDetail:function (url) {
+            handlerShowDetail(url);
         }
 
     }

@@ -1,6 +1,7 @@
 package com.damiza.my.shop.domain;
 
 import com.damiza.my.shop.commons.persistence.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -19,6 +20,7 @@ public class TbUser extends BaseEntity {
         this.username = username;
     }
 
+    @JsonIgnore
     public String getPassword() {
         return password;
     }
