@@ -6,7 +6,7 @@ import com.damiza.my.shop.commons.persistence.BaseEntity;
  * 内容管理
  */
 public class TbContent extends BaseEntity {
-    private String categoryId;
+    private Long categoryId;
     private String title;
     private String subTitle;
     private String titleDesc;
@@ -15,11 +15,11 @@ public class TbContent extends BaseEntity {
     private String pic2;
     private String content;
 
-    public String getCategoryId() {
+    public Long getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(String categoryId) {
+    public void setCategoryId(Long categoryId) {
         this.categoryId = categoryId;
     }
 
