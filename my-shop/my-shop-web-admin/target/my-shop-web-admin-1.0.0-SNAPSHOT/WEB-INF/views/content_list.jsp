@@ -164,7 +164,11 @@
             {"data":"url"},
             {"data":"pic"},
             {"data":"pic2"},
-            {"data":"updated"},
+            {
+                "data": function (row, type, val, meta) {
+                    return DateTime.format(row.updated,"yyyy-MM-dd HH:mm:ss");
+                }
+            },
             {
                 "data":function (row,type,val,meta) {
                     var detailUrl="/content/detail?id="+row.id;

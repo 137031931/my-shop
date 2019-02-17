@@ -175,7 +175,11 @@
           {"data":"username"},
           {"data":"phone"},
           {"data":"email"},
-          {"data":"updated"},
+          {
+              "data": function (row, type, val, meta) {
+                  return DateTime.format(row.updated, "yyyy-MM-dd HH:mm:ss");
+              }
+          },
           {
               "data":function (row,type,val,meta) {
                   var detailUrl="/user/detail?id="+row.id;
