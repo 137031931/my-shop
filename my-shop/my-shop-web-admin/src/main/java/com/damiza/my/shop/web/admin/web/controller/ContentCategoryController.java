@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,19 @@ public class ContentCategoryController {
         sortList(sourceList,targetList,0L);
         model.addAttribute("tbContentCategories",targetList);
         return "content_category_list";
+    }
+
+    /**
+     * 树形结构
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/tree/data",method = RequestMethod.POST)
+    public List<TbContentCategory> treeData(Long id){
+        if (id == null ){
+            id = 0L;
+        }
+        return tbContentCategoryService.selectByPid(id);
     }
 
     /**

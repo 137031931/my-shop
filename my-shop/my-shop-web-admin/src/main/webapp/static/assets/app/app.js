@@ -188,6 +188,36 @@ var App = function() {
         return _dataTable;
     };
 
+
+    var handlerInitZTree = function (url,autoParam,callback) {
+        var setting = {
+            view: {
+                selectedMulti: false
+            },
+            async: {
+                enable: true,
+                url: url,
+                autoParam: autoParam,
+                otherParam: {"otherParam": "zTreeAsyncTest"},
+            }
+        };
+        $.fn.zTree.init($("#myTree"), setting);
+
+        $("#btnModalOk").bind("click", function () {
+            var zTree = $.fn.zTree.getZTreeObj("myTree");
+            var nodes = zTree.getSelectedNodes();
+            //为选中
+            if (nodes.length == 0) {
+                alert("请先选择一个节点");
+            }
+            //已选择
+            else {
+                callback(nodes);
+            }
+        });
+    };
+
+
     /**
      * 查看详情
      * @param url
@@ -232,6 +262,16 @@ var App = function() {
          */
         initDataTables:function (url,columns) {
             return handlerInitDataTables(url,columns);
+        },
+
+        /**
+         * 初始化ZTree
+         * @param url
+         * @param autoParam
+         * @param callback
+         */
+        initZTree: function(url,autoParam,callback){
+            handlerInitZTree(url,autoParam,callback);
         },
 
         /**
