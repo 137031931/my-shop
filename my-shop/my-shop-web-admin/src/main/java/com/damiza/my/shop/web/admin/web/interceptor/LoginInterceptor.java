@@ -2,7 +2,6 @@ package com.damiza.my.shop.web.admin.web.interceptor;
 
 import com.damiza.my.shop.commons.constant.ConstantUtils;
 import com.damiza.my.shop.domain.TbUser;
-import com.damiza.my.shop.domain.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 

@@ -57,7 +57,7 @@ public class ContentCategoryController {
             targetList.add(tbContentCategory);
 
                 //判断有没有子节点,如果有继续
-                if(tbContentCategory.getParent()){
+                if(tbContentCategory.getIsParent()){
                     for (TbContentCategory contentCategory : sourceList) {
                         if(contentCategory.getParentId().equals(tbContentCategory.getId())){
                             sortList(sourceList,targetList,tbContentCategory.getId());
