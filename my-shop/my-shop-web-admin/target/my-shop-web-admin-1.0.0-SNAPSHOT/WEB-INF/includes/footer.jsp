@@ -67,7 +67,7 @@
 
 
 <%--自己做的App级别--%>
-<script src="/static/assets/app/validate.js"></script>
+<%--<script src="/static/assets/app/validate.js"></script>--%>
 
 <%--自己做的App级别--%>
 <script src="/static/assets/app/app.js"></script>

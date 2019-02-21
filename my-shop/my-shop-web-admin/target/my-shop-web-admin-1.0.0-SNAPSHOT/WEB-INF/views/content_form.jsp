@@ -14,6 +14,8 @@
     <title>我的商城 | 内容管理</title>
     <jsp:include page="../includes/header.jsp"/>
     <link rel="stylesheet" href="/static/assets/plugins/jquery-ztree/css/zTreeStyle/zTreeStyle.min.css"/>
+    <link rel="stylesheet" href="/static/assets/plugins/dropzone/dropzone.css"/>
+    <link rel="stylesheet" href="/static/assets/plugins/dropzone/min/basic.min.css"/>
 </head>
 <%--52.61-48.93--%>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -65,6 +67,57 @@
                                         <input class="form-control required " id="categoryName" placeholder="请选择父级类目" readonly="true" data-toggle="modal" data-target="#modal-default"/>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="title" class="col-sm-2 control-label">标题</label>
+
+                                    <div class="col-sm-10">
+                                        <form:input path="title" class="form-control required" placeholder="标题" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subTitle" class="col-sm-2 control-label">子标题</label>
+
+                                    <div class="col-sm-10">
+                                        <form:input path="subTitle" class="form-control required" placeholder="子标题" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="titleDesc" class="col-sm-2 control-label">标题描述</label>
+
+                                    <div class="col-sm-10">
+                                        <form:input path="titleDesc" class="form-control required" placeholder="标题描述" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="url" class="col-sm-2 control-label">链接</label>
+
+                                    <div class="col-sm-10">
+                                        <form:input path="url" class="form-control required" placeholder="链接"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="url" class="col-sm-2 control-label">图片1</label>
+
+                                    <div class="col-sm-10">
+                                        <form:input path="pic" class="form-control required" placeholder="图片1"/>
+                                        <div id="dropz" class="dropzone"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="url" class="col-sm-2 control-label">图片2</label>
+
+                                    <div class="col-sm-10">
+                                        <form:input path="pic2" class="form-control required" placeholder="图片2"/>
+                                        <div id="dropz2" class="dropzone"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="content" class="col-sm-2 control-label">详情</label>
+
+                                    <div class="col-sm-10">
+                                        <form:textarea rows="5" path="content" class="form-control required" placeholder="详情"/>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
@@ -83,6 +136,7 @@
 
 <jsp:include page="../includes/footer.jsp"/>
 <script src="/static/assets/plugins/jquery-ztree/js/jquery.ztree.core-3.5.min.js"></script>
+<script src="/static/assets/plugins/dropzone/min/dropzone.min.js"></script>
 <%--自定义模态框--%>
 <sys:modal title="请选择" message="<ul id='myTree' class='ztree'></ul>"/>
 <script>
@@ -92,7 +146,26 @@
             $("#categoryId").val(node.id);
             $("#categoryName").val(node.name);
             $("#modal-default").modal("hide");
-        })
+        });
+    });
+
+    App.initDropZone({
+        id:"#dropz",
+        url:"/upload",
+        init:function () {
+            this.on("success",function (file,data) {
+                $("#pic").val(data.fileName);
+            });
+        }
+    });
+    App.initDropZone({
+        id:"#dropz2",
+        url:"/upload",
+        init:function () {
+            this.on("success",function (file,data) {
+                $("#pic").val(data.fileName);
+            });
+        }
     });
 </script>
 </body>

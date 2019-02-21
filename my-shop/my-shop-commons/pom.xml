@@ -17,6 +17,13 @@
     <description></description>
 
     <dependencies>
+        <!--Spring Begin-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <!--Spring end-->
+
         <!--logs begin-->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -63,6 +70,11 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <!--JSR303验证-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
         </dependency>
     </dependencies>
 

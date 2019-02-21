@@ -9,6 +9,24 @@ var App = function() {
 
     var _idArray;
 
+    //默认的dropZone对象参数
+    var defaultDropZoneOpts = {
+        url: "",
+        paramName:"dropFile",
+        maxFiles: 1,// 一次性上传的文件数量上限
+        maxFilesize: 2, // 文件大小，单位：MB
+        acceptedFiles: ".jpg,.gif,.png,.jpeg", // 上传的类型
+        addRemoveLinks: true,
+        parallelUploads: 1,// 一次上传的文件数量
+        dictDefaultMessage: '拖动文件至此或者点击上传',
+        dictMaxFilesExceeded: "您最多只能上传"+this.maxFiles+"个文件！",
+        dictResponseError: '文件上传失败!',
+        dictInvalidFileType: "文件类型只能是*.jpg,*.gif,*.png,*.jpeg。",
+        dictFallbackMessage: "浏览器不受支持",
+        dictFileTooBig: "文件过大上传文件最大支持.",
+        dictRemoveLinks: "删除",
+        dictCancelUpload: "取消",
+    };
     /**
      * 私有方法
      */
@@ -217,7 +235,17 @@ var App = function() {
         });
     };
 
-
+    /**
+     * 初始化DropZone
+     * @param opts
+     */
+    var handerInitDropzone = function (opts) {
+        //关闭dropzone的自动发现功能
+        Dropzone.autoDiscover = false;
+        //继承
+        $.extend(defaultDropZoneOpts,opts);
+        new Dropzone(defaultDropZoneOpts.id, defaultDropZoneOpts);
+    };
     /**
      * 查看详情
      * @param url
@@ -242,6 +270,7 @@ var App = function() {
          * 初始化
          */
         init: function () {
+
             handlerInitCheckbox();
             handlerCheckboxAll();
         },
@@ -274,6 +303,10 @@ var App = function() {
             handlerInitZTree(url,autoParam,callback);
         },
 
+
+        initDropZone: function(opts){
+          handerInitDropzone(opts);
+        },
         /**
          * 显示详情
          * @param url

@@ -71,7 +71,7 @@ public class TbContentController {
         //保存成功
         if (baseResult.getStatus() == 200) {
             redirectAttributes.addFlashAttribute("baseResult", baseResult);
-            return "redirect:/user/list";
+            return "redirect:/content/list";
         }
         //保存失败
         else {

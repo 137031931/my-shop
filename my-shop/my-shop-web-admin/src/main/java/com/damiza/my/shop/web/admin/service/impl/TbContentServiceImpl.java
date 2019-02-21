@@ -2,6 +2,7 @@ package com.damiza.my.shop.web.admin.service.impl;
 
 import com.damiza.my.shop.commons.dto.BaseResult;
 import com.damiza.my.shop.commons.dto.PageInfo;
+import com.damiza.my.shop.commons.validator.BeanValidator;
 import com.damiza.my.shop.domain.TbContent;
 import com.damiza.my.shop.web.admin.dao.TbContentDao;
 import com.damiza.my.shop.web.admin.service.TbContentService;
@@ -26,9 +27,14 @@ public class TbContentServiceImpl implements TbContentService {
 
     @Override
     public BaseResult save(TbContent tbContent) {
-        BaseResult baseResult = checkTbContent(tbContent);
-        //如果通过验证
-        if (baseResult.getStatus() == BaseResult.STATUS_SUCCESS){
+        String validator = BeanValidator.validator(tbContent);
+        //不通过验证
+        if(validator != null){
+            return BaseResult.fail(validator);
+        }
+
+        //通过验证
+        else{
             tbContent.setUpdated(new Date());
             //新增
             if (tbContent.getId() == null){
@@ -40,12 +46,9 @@ public class TbContentServiceImpl implements TbContentService {
             else {
                 tbContentDao.update(tbContent);
             }
-
-                baseResult.setMessage("保存内容信息成功");
-            }
-
-            return baseResult;
+            return BaseResult.success("保存内容信息成功");
         }
+    }
 
 
     @Override
@@ -94,45 +97,4 @@ public class TbContentServiceImpl implements TbContentService {
         return tbContentDao.count(tbContent);
     }
 
-    /**
-     * 信息的有效性验证
-     * @param tbContent
-     */
-    private BaseResult checkTbContent(TbContent tbContent){
-        BaseResult baseResult = BaseResult.success();
-        //非空验证
-        //email不能为空
-        if(tbContent.getCategoryId() == null){
-            baseResult = BaseResult.fail("内容的所属分类不能为空,请重新输入");
-
-        }
-        else if (tbContent.getTitle() == null){
-            baseResult = BaseResult.fail("内容标题不能为空,请重新输入");
-        }
-
-        else if (tbContent.getSubTitle() == null) {
-            baseResult = BaseResult.fail("子标题不能为空,请重新输入");
-        }
-        else if(tbContent.getTitleDesc() == null){
-            baseResult = BaseResult.fail("标题描述不能为空,请重新输入");
-
-        }
-        else if (tbContent.getUrl() == null){
-            baseResult = BaseResult.fail("链接不能为空,请重新输入");
-        }
-        else if(tbContent.getPic() == null){
-            baseResult = BaseResult.fail("图片绝对路径不能为空,请重新输入");
-
-        }
-        else if (tbContent.getPic2() == null){
-            baseResult = BaseResult.fail("图片2绝对路径不能为空,请重新输入");
-        }
-        //验证
-        else if(tbContent.getContent() == null){
-            baseResult = BaseResult.fail("内容不能为空,请重新输入");
-
-        }
-
-        return baseResult;
-    }
 }
