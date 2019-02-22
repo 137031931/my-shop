@@ -196,7 +196,7 @@
                 "data":function (row,type,val,meta) {
                     var detailUrl="/content/detail?id="+row.id;
                     return '<button type="button" class="btn btn-default btn-sm" onclick="App.showDetail(\''+detailUrl+'\')"><i class="fa fa-search" ></i>查看</button >&nbsp;&nbsp;&nbsp;'+
-                        '<a href="/user/form?id='+row.id+'" type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit">编辑</i></a>&nbsp;&nbsp;&nbsp;'+
+                        '<a href="/content/form?id='+row.id+'" type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit">编辑</i></a>&nbsp;&nbsp;&nbsp;'+
                         '<a href="#" type="button" class="btn btn-danger btn-sm"><i class="fa  fa-trash">删除</i></a>';
                 }
             }
