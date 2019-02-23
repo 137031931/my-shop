@@ -152,18 +152,23 @@
             $("#categoryName").val(node.name);
             $("#modal-default").modal("hide");
         });
-    });
-    var E = window.wangEditor
-    var editor = new E('#editor')
-    editor.create();
-    $("#btnSubmit").bind("click",function () {
-        var contentHtml = editor.txt.html();
-        $("#content").val(contentHtml)
+        initWangEditor();
     });
 
-    $("#btnTest1").bind("click",function () {
-        alert(editor.txt.text())
-    });
+    function initWangEditor(){
+        var E = window.wangEditor;
+        var editor = new E('#editor');
+        // 配置服务器端地址
+        editor.customConfig.uploadImgServer ='/upload';
+        editor.customConfig.uploadFileName = 'editorFile';
+        editor.create();
+
+        $("#btnSubmit").bind("click",function () {
+            var contentHtml = editor.txt.html();
+            $("#content").val(contentHtml)
+        });
+    }
+
     App.initDropZone({
         id:"#dropz",
         url:"/upload",
@@ -181,6 +186,11 @@
                 $("#pic").val(data.fileName);
             });
         }
+    });
+
+
+    $("#btnTest1").bind("click",function () {
+        alert(editor.txt.text())
     });
 </script>
 </body>

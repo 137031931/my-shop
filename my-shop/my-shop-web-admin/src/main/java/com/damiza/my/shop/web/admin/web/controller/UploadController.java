@@ -16,18 +16,21 @@ import java.util.UUID;
 /**
  * 文件上传控制器
  */
-@Controller public class UploadController {
+@Controller
+public class UploadController {
     private static final String UPLOAD_PATH = "/static/upload/";
+
     @ResponseBody
     @RequestMapping(value = "upload",method = RequestMethod.POST)
-    public Map<String,Object> upload(MultipartFile dropFile, HttpServletRequest request) {
+    public Map<String,Object> upload(MultipartFile dropFile, MultipartFile editorFile,HttpServletRequest request) {
         Map<String,Object> result = new HashMap<>();
 
+        MultipartFile myFile = dropFile == null ? editorFile : dropFile;
         //获取文件名
-        String fileName = dropFile.getOriginalFilename();
+        String fileName = myFile.getOriginalFilename();
 
         //获取文件后缀
-        String fileNameSuffix = fileName.substring(fileName.lastIndexOf("."));
+        String fileSuffix = fileName.substring(fileName.lastIndexOf("."));
         //文件存放路径
         String filePath = request.getSession().getServletContext().getRealPath(UPLOAD_PATH);
         File file = new File(filePath);
@@ -36,13 +39,29 @@ import java.util.UUID;
         if(!file.exists()){
             file.mkdir();
         }
-        file = new File(filePath, UUID.randomUUID()+fileNameSuffix);
+        file = new File(filePath, UUID.randomUUID()+fileSuffix);
         try {
-            dropFile.transferTo(file);
+            myFile.transferTo(file);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        result.put("fileName",UPLOAD_PATH+file.getName());
+
+        if (dropFile != null){
+            result.put("fileName",UPLOAD_PATH+file.getName());
+        }
+        else {
+
+            /**
+             * scheme:服务端提供的协议http/https
+             * ServerName:服务器名称 localhost/ip/domain
+             * serverPort:服务器端口
+             */
+            String serverPath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort();
+
+            result.put("errno",0);
+            result.put("data",new String[]{serverPath + UPLOAD_PATH + file.getName()});
+        }
+
         return result;
     }
 }
