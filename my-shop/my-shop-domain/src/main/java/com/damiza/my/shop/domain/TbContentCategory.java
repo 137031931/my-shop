@@ -15,4 +15,5 @@ public class TbContentCategory extends BaseEntity {
     //这个注解是给这个参数起个别名
 //    @JsonProperty(value = "isParent")
     private Boolean isParent;
+    private TbContentCategory parent;
 }

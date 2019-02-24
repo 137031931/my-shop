@@ -13,21 +13,35 @@
             a.pic2,
             a.content,
             a.created,
-            a.updated
-
+            a.updated,
+            b.id AS "tbContentCategory.id",
+            b.name AS "tbContentCategory.name"
        </sql>
 
+        <sql id="tbContentJoins">
+            LEFT JOIN tb_content_category AS b ON a.category_id = b.id
+        </sql>
 
+        <!-- 查询一定要有结果映射 -->
+        <select id="getById" resultType="TbContent">
+            SELECT
+            <include refid="tbContentColumns"/>
+
+            FROM
+            tb_content AS a
+            <include refid="tbContentJoins"/>
+            WHERE
+            a.id = #{id}
+        </select>
 
         <!--这里的ID要和方法里的名字对应-->
         <!-- 如果实体类的大小写和表中字段不匹配,可以用AS给表中字段起个别名 -->
         <select id="selectAll" resultType="TbContent">
-
             SELECT
             <include refid="tbContentColumns"/>
             FROM
-            tb_tbContent AS a
-
+            tb_content AS a
+            <include refid="tbContentJoins"/>
         </select>
 
         <!-- 因为主键自增,所以可以不写id -->
@@ -46,7 +60,7 @@
                 )
             VALUES
               (
-                #{categoryId},
+                #{tbContentCategory.id},
                 #{title},
                 #{subTitle},
                 #{titleDesc},
@@ -56,30 +70,20 @@
                 #{content},
                 #{created},
                 #{updated}
-              );
-
+              )
         </insert>
         <!-- 根据id删除 -->
         <delete id="delete">
            DELETE FROM tb_content WHERE id = #{id};
-
         </delete>
 
-        <!-- 查询一定要有结果映射 -->
-        <select id="getById" resultType="TbContent">
-            SELECT
-            <include refid="tbContentColumns"/>
-            FROM
-             tb_content AS a
-            WHERE a.id = #{id};
-        </select>
 
         <!-- 更新用户的id不变,创建时间也不变 -->
         <update id="update">
             UPDATE
                 tb_content
             SET
-                `category_id`= #{categoryId},
+                `category_id`= #{tbContentCategory.id},
                 `title`= #{title},
                 `sub_title`= #{subTitle},
                 `title_desc` = #{titleDesc},
@@ -104,8 +108,12 @@
         <select id="page" resultType="TbContent" parameterType="java.util.Map">
             SELECT
             <include refid="tbContentColumns"/>
+
             FROM
             tb_content AS a
+            <include refid="tbContentJoins"/>
+            WHERE
+            a.id = #{id};
             <where>
                 <if test="tbContent.title != null and tbContent.title  != '' ">
                     AND a.title LIKE  CONCAT('%',#{tbContent.title},'%')

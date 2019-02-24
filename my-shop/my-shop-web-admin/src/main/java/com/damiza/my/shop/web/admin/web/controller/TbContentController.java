@@ -31,6 +31,7 @@ public class TbContentController {
         } else {
             tbContent = new TbContent();
         }
+
         return tbContent;
 
     }
