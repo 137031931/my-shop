@@ -155,17 +155,20 @@
         initWangEditor();
     });
 
+    /**
+     * 初始化富文本编辑器
+     */
     function initWangEditor(){
         var E = window.wangEditor;
         var editor = new E('#editor');
         // 配置服务器端地址
         editor.customConfig.uploadImgServer ='/upload';
-        editor.customConfig.uploadFileName = 'editorFile';
+        editor.customConfig.uploadFileName = 'editorFiles';
         editor.create();
 
         $("#btnSubmit").bind("click",function () {
             var contentHtml = editor.txt.html();
-            $("#content").val(contentHtml)
+            $("#content").val(contentHtml);
         });
     }
 
@@ -188,10 +191,6 @@
         }
     });
 
-
-    $("#btnTest1").bind("click",function () {
-        alert(editor.txt.text())
-    });
 </script>
 </body>
 </html>

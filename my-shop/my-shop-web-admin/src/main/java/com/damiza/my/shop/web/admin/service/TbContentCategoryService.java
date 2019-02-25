@@ -1,16 +1,8 @@
 package com.damiza.my.shop.web.admin.service;
 
-import com.damiza.my.shop.commons.persistence.BaseService;
+import com.damiza.my.shop.commons.persistence.BaseTreeService;
 import com.damiza.my.shop.domain.TbContentCategory;
 
-import java.util.List;
+public interface TbContentCategoryService extends BaseTreeService<TbContentCategory> {
 
-public interface TbContentCategoryService extends BaseService<TbContentCategory> {
-
-    /**
-     * 根据父级节点查询所有子节点
-     * @param pid
-     * @return
-     */
-    List<TbContentCategory> selectByPid(Long pid);
 }

@@ -173,7 +173,7 @@ var App = function() {
 
             "columns":columns,
 
-            language: {
+            "language": {
                 "sProcessing": "处理中...",
                 "sLengthMenu": "显示 _MENU_ 项结果",
                 "sZeroRecords": "没有匹配结果",

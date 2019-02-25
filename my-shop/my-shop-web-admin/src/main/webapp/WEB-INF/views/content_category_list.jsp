@@ -65,14 +65,14 @@
 
                                 <tbody>
                                     <c:forEach items="${tbContentCategories}" var="tbContentCategory">
-                                        <tr id="${tbContentCategory.id}" pId="${tbContentCategory.parentId}">
+                                        <tr id="${tbContentCategory.id}" pId="${tbContentCategory.parent.id}">
                                             <td>${tbContentCategory.id}</td>
                                             <td>${tbContentCategory.name}</td>
                                             <td>${tbContentCategory.sortOrder}</td>
                                             <td>
                                                 <a href="#" type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit">编辑</i></a>&nbsp;&nbsp;&nbsp;
                                                 <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o">删除</i></button>&nbsp;&nbsp;&nbsp;
-                                                <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa fa-plus">新增下级菜单</i></a>
+                                                <a href="/content/category/form?parent.id=${tbContentCategory.id}&parent.name=${tbContentCategory.name}" type="button" class="btn btn-default btn-sm"><i class="fa fa-plus">新增下级菜单</i></a>
                                             </td>
                                         </tr>
                                     </c:forEach>
