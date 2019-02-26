@@ -10,7 +10,6 @@ import com.damiza.my.shop.web.admin.service.TbContentCategoryService;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
-import java.util.List;
 
 @Service
 public class TbContentCategoryServiceImpl extends AbstractsBaseTreeServiceImpl<TbContentCategory, TbContentCategoryDao> implements TbContentCategoryService {
@@ -49,7 +48,7 @@ public class TbContentCategoryServiceImpl extends AbstractsBaseTreeServiceImpl<T
                     entity.setIsParent(true);
                 }
 
-                insert(entity);
+                dao.insert(entity);
             }
 
             else {

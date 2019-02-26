@@ -10,7 +10,7 @@ import java.util.List;
 public abstract class AbstractsBaseTreeServiceImpl<T extends BaseEntity, D extends BaseTreeDao<T>> implements BaseTreeService<T> {
 
     @Autowired
-    private D dao;
+    protected D dao;
     /**
      * 查询全部数据
      */
@@ -52,9 +52,5 @@ public abstract class AbstractsBaseTreeServiceImpl<T extends BaseEntity, D exten
     @Override
     public List<T> selectByPid(Long pid){
         return dao.selectByPid(pid);
-    }
-
-    public void insert(T entity){
-        dao.insert(entity);
     }
 }
