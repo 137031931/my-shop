@@ -8,13 +8,16 @@ import com.damiza.my.shop.web.admin.abstracts.AbstractsBaseTreeServiceImpl;
 import com.damiza.my.shop.web.admin.dao.TbContentCategoryDao;
 import com.damiza.my.shop.web.admin.service.TbContentCategoryService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
 @Service
+@Transactional(readOnly = true)
 public class TbContentCategoryServiceImpl extends AbstractsBaseTreeServiceImpl<TbContentCategory, TbContentCategoryDao> implements TbContentCategoryService {
 
     @Override
+    @Transactional(readOnly = false)
     public BaseResult save(TbContentCategory entity) {
         String validator = BeanValidator.validator(entity);
         if (validator != null){

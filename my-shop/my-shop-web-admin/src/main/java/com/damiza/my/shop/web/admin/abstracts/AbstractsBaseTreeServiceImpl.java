@@ -4,6 +4,7 @@ import com.damiza.my.shop.commons.persistence.BaseEntity;
 import com.damiza.my.shop.commons.persistence.BaseTreeDao;
 import com.damiza.my.shop.commons.persistence.BaseTreeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -24,6 +25,7 @@ public abstract class AbstractsBaseTreeServiceImpl<T extends BaseEntity, D exten
      * @param id
      */
     @Override
+    @Transactional(readOnly = false)
     public void delete(Long id){
         dao.delete(id);
     }
@@ -40,6 +42,7 @@ public abstract class AbstractsBaseTreeServiceImpl<T extends BaseEntity, D exten
      * 更新
      */
     @Override
+    @Transactional(readOnly = false)
     public void update(T entity){
         dao.update(entity);
     }
