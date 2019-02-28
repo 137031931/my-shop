@@ -1,11 +1,10 @@
 package com.damiza.my.shop.web.admin.web.controller;
 
 import com.damiza.my.shop.commons.dto.BaseResult;
-import com.damiza.my.shop.commons.dto.PageInfo;
 import com.damiza.my.shop.domain.TbContent;
+import com.damiza.my.shop.web.admin.abstracts.AbstractBaseController;
 import com.damiza.my.shop.web.admin.service.TbContentService;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -13,13 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping(value = "content")
-public class TbContentController {
-    @Autowired
-    private TbContentService tbContentService;
+public class TbContentController extends AbstractBaseController<TbContent,TbContentService> {
 
     //这个注解说明下面的方法会在@RequestMapping执行之前执行
     @ModelAttribute
@@ -27,7 +23,7 @@ public class TbContentController {
         TbContent tbContent  = null;
         //id不为空,则从数据库获取
         if (id != null) {
-            tbContent = tbContentService.getById(id);
+            tbContent = service.getById(id);
         } else {
             tbContent = new TbContent();
         }
@@ -67,7 +63,7 @@ public class TbContentController {
     @RequestMapping(value = "save", method = RequestMethod.POST)
     public String save(TbContent tbContent, Model model, RedirectAttributes redirectAttributes) {
 
-        BaseResult baseResult = tbContentService.save(tbContent);
+        BaseResult baseResult = service.save(tbContent);
 
         //保存成功
         if (baseResult.getStatus() == 200) {
@@ -96,7 +92,7 @@ public class TbContentController {
 
         if (StringUtils.isNotBlank(ids)) {
             String[] idArray = ids.split(",");
-            tbContentService.deleteMulti(idArray);
+            service.deleteMulti(idArray);
             baseResult = BaseResult.success("删除内容成功");
         } else {
             baseResult = BaseResult.fail("删除内容失败");

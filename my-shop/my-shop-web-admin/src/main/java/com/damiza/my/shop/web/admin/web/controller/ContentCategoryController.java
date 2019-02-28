@@ -43,7 +43,7 @@ public class ContentCategoryController extends AbstractBaseTreeController<TbCont
 
         //排序
         sortList(sourceList,targetList,0L);
-        model.addAttribute("tbContentCategory",targetList);
+        model.addAttribute("tbContentCategories",targetList);
         return "content_category_list";
     }
 

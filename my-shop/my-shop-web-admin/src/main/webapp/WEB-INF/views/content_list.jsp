@@ -30,6 +30,16 @@
                 内容管理
                 <small></small>
             </h1>
+            <ol class="breadcrumb">
+
+                <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+
+                <li class="active">控制面板</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+            <section class="content">
             <div class="row">
                 <div class="col-xs-12">
                     <c:if test="${baseResult != null}">
@@ -133,11 +143,6 @@
                 <li class="active">控制面板</li>
             </ol>
         </section>
-
-        <!-- Main content -->
-        <section class="content">
-
-        </section>
     </div>
     <jsp:include page="../includes/copyright.jsp"/>
 </div>
@@ -197,9 +202,10 @@
             {
                 "data":function (row,type,val,meta) {
                     var detailUrl="/content/detail?id="+row.id;
-                    return '<button type="button" class="btn btn-default btn-sm" onclick="App.showDetail(\''+detailUrl+'\')"><i class="fa fa-search" ></i>查看</button >&nbsp;&nbsp;&nbsp;'+
+                    var deleteUrl = "/content/delete";
+                    return '<button type="button" class="btn btn-sm btn-default" onclick="App.showDetail(\'' + detailUrl + '\');"><i class="fa fa-search"></i> 查看</button>&nbsp;&nbsp;&nbsp;' +
                         '<a href="/content/form?id='+row.id+'" type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit">编辑</i></a>&nbsp;&nbsp;&nbsp;'+
-                        '<a href="#" type="button" class="btn btn-danger btn-sm"><i class="fa  fa-trash">删除</i></a>';
+                        '<button type="button" class="btn btn-sm btn-danger" onclick="App.deleteSingle(\'' + deleteUrl + '\', \'' + row.id + '\')"><i class="fa fa-trash-o"></i> 删除</button>';
                 }
             }
         ]

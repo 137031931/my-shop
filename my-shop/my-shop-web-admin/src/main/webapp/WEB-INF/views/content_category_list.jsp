@@ -32,6 +32,17 @@
                 内容管理
                 <small></small>
             </h1>
+            <ol class="breadcrumb">
+
+                <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+
+                <li class="active">控制面板</li>
+            </ol>
+        </section>
+
+        <!-- Main content -->
+
+        <section class="content">
             <div class="row">
                 <div class="col-xs-12">
                     <c:if test="${baseResult != null}">
@@ -47,7 +58,7 @@
                             <h3 class="box-title">分类列表</h3>
                         </div>
                         <div class="box-body">
-                            <a href="/content/category/" type="button" class="btn btn-default btn-sm"><i class="fa  fa-plus"></i>新增</a>&nbsp;&nbsp;&nbsp;
+                            <a href="/content/category/form" type="button" class="btn btn-default btn-sm"><i class="fa  fa-plus"></i>新增</a>&nbsp;&nbsp;&nbsp;
                             <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-download"></i>导入</a>&nbsp;&nbsp;&nbsp;
                             <a href="#" type="button" class="btn btn-default btn-sm"><i class="fa  fa-upload"></i>导出</a>&nbsp;&nbsp;&nbsp;
                         </div>
@@ -59,7 +70,7 @@
                                         <th>ID</th>
                                         <th>名称</th>
                                         <th>排序</th>
-                                        <th>编辑</th>
+                                        <th>操作</th>
                                     </tr>
                                 </thead>
 
@@ -70,8 +81,8 @@
                                             <td>${tbContentCategory.name}</td>
                                             <td>${tbContentCategory.sortOrder}</td>
                                             <td>
-                                                <a href="#" type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit">编辑</i></a>&nbsp;&nbsp;&nbsp;
-                                                <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-trash-o">删除</i></button>&nbsp;&nbsp;&nbsp;
+                                                <a href="/content/category/form?id=${tbContentCategory.id}" type="button" class="btn btn-primary btn-sm"><i class="fa fa-edit">编辑</i></a>&nbsp;&nbsp;&nbsp;
+                                                <button type="button" class="btn btn-danger btn-sm" onclick="App.deleteSingle('/content/category/delete','${tbContentCategory.id}','警告:该删除操作会将包括选中类目在内的全部子类目及属于类目的内容,请谨慎操作，确定继续吗')"><i class="fa fa-trash-o">删除</i></button>&nbsp;&nbsp;&nbsp;
                                                 <a href="/content/category/form?parent.id=${tbContentCategory.id}&parent.name=${tbContentCategory.name}" type="button" class="btn btn-default btn-sm"><i class="fa fa-plus">新增下级菜单</i></a>
                                             </td>
                                         </tr>
@@ -85,16 +96,6 @@
                 </div>
             </div>
 
-
-            <!-- /.modal -->
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-                <li class="active">控制面板</li>
-            </ol>
-        </section>
-
-        <!-- Main content -->
-        <section class="content">
 
         </section>
     </div>

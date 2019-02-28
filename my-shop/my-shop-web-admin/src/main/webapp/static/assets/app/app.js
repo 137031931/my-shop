@@ -36,7 +36,7 @@ var App = function() {
         $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
             checkboxClass: 'icheckbox_minimal-blue',
             radioClass   : 'iradio_minimal-blue'
-        })
+        });
 
 
     //获取控制端checkbox
@@ -44,7 +44,6 @@ var App = function() {
 
     //获取全部checkbox
     _checkbox = $('input[type="checkbox"].minimal');
-
     };
 
     //checkbox的全选功能
@@ -61,8 +60,26 @@ var App = function() {
                 _checkbox.iCheck("check");
             }
         });
-    }
+    };
 
+    /**
+     * 删除单笔记录
+     */
+    var handlerDeleteSingle = function (url,id,msg)  {
+        //可选参数
+        if (!msg) msg  = null;
+
+        //将ID放入数组中,以便和批量删除通用
+        _idArray = new Array();
+        _idArray.push(id);
+
+        $("#modal-message").html(msg == null ? "您确定删除数据项吗?":msg);
+        $("#modal-message").modal("show");
+        //绑定删除事件
+        $("#btnModalOk").bind("click",function () {
+            handlerDeleteData(url);
+        });
+    };
     /**
      *     批量删除
      */
@@ -97,23 +114,21 @@ var App = function() {
 
         //选择确定删除调用删除方法
         $("#btnModalOk").bind("click",function () {
-            del();
+            handlerDeleteData(url);
         });
-
+    };
         /**
-         * 当前函数的私有函数,删除数据
+         * AJAX 异步删除
+         * @param url
          */
-        function del() {
+        var handlerDeleteData = function (url) {
 
             $('#modal-default').modal("hide");
 
             //如果没有选择数据项
-            if(_idArray.length === 0 ){
+            if(_idArray.length > 0 ){
 
-            }
-            //删除操作
-            else{
-                //这里延迟执行
+                //这里延迟执行AJAX异步删除
                 setTimeout(function () {
                     $.ajax({
                         "url":url,
@@ -139,20 +154,16 @@ var App = function() {
                                 $("#btnModalOk").bind("click",function () {
                                     $('#modal-default').modal("hide");
                                 });
-
                             }
+
                             //因为无论如何都要提示信息,所以模态框是必须调用的
                             $('#modal-message').html(data.message);
                             $('#modal-default').modal("show");
-
                         }
                     });
-                },500);
-
+                },500)
             }
-
-        }
-    };
+        };
 
     /**
      * 初始化dataTables
@@ -276,6 +287,13 @@ var App = function() {
         },
 
         /**
+         * 删除单笔数据
+         * @param url
+         */
+        deleteSingle: function(url, id, msg) {
+            handlerDeleteSingle(url, id, msg);
+        },
+        /**
          * 批量删除
          * @param url
          */
@@ -314,7 +332,6 @@ var App = function() {
         showDetail:function (url) {
             handlerShowDetail(url);
         }
-
     }
 }();
 //导入这个js使其直接生效.

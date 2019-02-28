@@ -12,6 +12,7 @@ import com.damiza.my.shop.web.admin.service.TbUserService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
 import java.util.Date;
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@Transactional(readOnly = true)
 public class TbUserServiceImpl extends AbstractBaseServiceImpl<TbUser,TbUserDao> implements TbUserService {
 
     @Override
