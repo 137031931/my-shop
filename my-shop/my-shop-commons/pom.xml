@@ -24,12 +24,18 @@
         </dependency>
         <!--Spring end-->
 
-        <!--logs begin-->
+        <!--commons begin-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+        </dependency>
+        <!--commons end-->
 
+        <!--logs begin-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
