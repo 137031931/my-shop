@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--这个模块中放的是实体类-->
+    <!--这个模块中放的是api接口-->
     <parent>
         <groupId>com.damiza</groupId>
         <artifactId>my-shop-dependencies</artifactId>
@@ -13,12 +13,23 @@
 
     <artifactId>my-shop-web-api</artifactId>
     <packaging>war</packaging>
-
     <name>my-shop-web-api</name>
     <description></description>
-    <dependencies>
 
-        <!--因为这里会用到实体类所以要依赖domain-->
+    <dependencies>
+        <!-- Test Begin -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+
+        <!-- Test Begin -->
+
+        <!-- Project Begin -->
         <dependency>
             <groupId>com.damiza</groupId>
             <artifactId>my-shop-domain</artifactId>
@@ -30,21 +41,20 @@
             <artifactId>my-shop-commons</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <!-- Project End -->
 
+        <!-- Spring Begin -->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
+            <artifactId>spring-webmvc</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-        </dependency>
+        <!-- Spring End -->
+
         <!-- Servlet Begin -->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -57,18 +67,7 @@
         </dependency>
         <!-- Servlet End -->
 
-        <!-- Test Begin -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <!-- Test end -->
-
-        <!-- Database begin -->
+        <!-- Database Begin -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
@@ -77,7 +76,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
@@ -86,14 +84,12 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
         </dependency>
-        <!-- Database end -->
 
+        <!-- Database End -->
     </dependencies>
-
-
-
 </project>
