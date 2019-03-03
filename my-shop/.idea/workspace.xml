@@ -2,247 +2,13 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="my-shop-web-admin:war exploded" />
+      <artifact name="my-shop-web-ui:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cef3b85-9ee6-4907-bd96-82f6b28e5347" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-shop-commons/src/main/java/com/damiza/my/shop/commons/utils/HttpClientUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/css/changecity.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/css/ziy.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/css/zxx.lib.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/houl/jquery.fancybox-1.3.4.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/houl/jquery.fancybox-1.3.4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/houl/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/20120418.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/20130606B.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/54d9eef9N5bb8d27f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/54d9ef02N99d26435.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/54d9ef10Nd206a236.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/54d9ef28N00328d44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/54d9ef34N7cc61f4c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/54d9ef3eN99aef1f0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/54d9ef4cN4fe57f9b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/562f4971Na5379aba.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/5673a854N10856704.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/5690b6dcNd5aaa0f0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/56960e10N27e2d29f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/56a0376aN7de1bdcf.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/7_170312181624_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/Shape-121.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/Shape-140.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/Shape_140.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/TIAN.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/addr-i.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/addtocart-icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/arrow_s.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/bend.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/beng.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/beng1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/beng2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/beng3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/beng4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/bg-sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/bg-upload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/big_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/big_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/big_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/btn20121210.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/btn_next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/btn_prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/cdsgfd.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/changecity_down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/changecity_triangle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/changecity_up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/choose_active.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/commentsListIcons1-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/commstar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/de111.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/dengl_bj.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/dianp_anli01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/dianp_anli02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/dianp_anli1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/dianp_anli2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/dianp_anli3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/dianp_banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/dianp_banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/dianp_bnanaer_zuoy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/dianp_logo_beij.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/drop-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/dshg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/email.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/er_wm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/10_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/10_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/11_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/11_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/12_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/12_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/1_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/1_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/2_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/2_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/3_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/3_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/4_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/4_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/5_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/5_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/6_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/6_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/7_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/7_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/8_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/8_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/9_b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/example/9_s.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/blank.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_loading.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_nav_left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_nav_right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_shadow_e.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_shadow_n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_shadow_ne.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_shadow_nw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_shadow_s.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_shadow_se.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_shadow_sw.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_shadow_w.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_title_left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_title_main.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_title_over.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancy_title_right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancybox-x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancybox-y.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/fancybox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/jquery.easing-1.3.pack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/jquery.fancybox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/fancybox/jquery.mousewheel-3.0.4.pack.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/gouwu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/guang_tu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/icoAdd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/iconZP.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/icon_v9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/jiank_meis.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/jing_b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/jiudi_kez.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/leis_z_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/lengy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/lieb_qieh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/lieb_tupi1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/lieb_tupi2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/lieb_tupi3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/liren.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/liuceng_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/logo_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/mask_bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/mb_wangid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/meinv_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/meinv_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/meinv_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/meinv_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/mm_yif.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/mobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/node-icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/onActive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/order-icon20150916.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/ping_l.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/pro_down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/pro_left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/proce-icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/pwd-icons-new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/qian_ddg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/qiche_tu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/qiehcs_beij.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/rem_shangp.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/rem_shangp1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/renz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/ruz_tongc.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/sanye.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/sanye_c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/sdg_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/search.ele.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/settleup-nogoods.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/shangj_jianj_beij.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/shangpfl.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/shangq_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/shangq_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/shangq_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/small_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/small_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/sos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/sprite_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/ss.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/step2013.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/succ-ico.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/t-107.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/t-108.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/te_se_shangp_da.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/tes_shangp_xiao.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/tes_shangp_xiao2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/tes_shangp_xiao3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/tes_shangp_xiao4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/thumbnail_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/thumbnail_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/toolbar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/toub_tub.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/toux.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/tu_001.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/tu_002.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/tu_003.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/tu_004.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/uc_sprite.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/update.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/v2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/web/asdf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/web/df.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/web/jif_banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/web/koab.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/web/slider-arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/wod_tongc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/xiangqtu_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/xiux_yvl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/yic_001.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/yic_002.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/yic_003.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/yic_004.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/yic_005.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/yic_006.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/yuan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/zlxg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/zoub.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/zoub2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/images/zoub3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/chengs/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/chengs/city-picker.data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/chengs/city-picker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/chengs/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/chengs/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/hou/jquery.cityselect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/jquery-1.11.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/jquery-1.11.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/jquery-1.4.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/jquery.SuperSlide.2.1.1.source.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/jquery.reveal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/jquery1.42.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/magnifier.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/meiy/jquery-1.9.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/meiy/location.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/qieh_cs/changecity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/js/select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/pie/pie.htc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/static/pie/pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-shop-commons/src/main/java/com/damiza/my/shop/commons/utils/MapperUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/java/com/damiza/my/shop/web/ui/dto/TbContent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-httpclient/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my-httpclient/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-httpclient/.idea/my-httpclient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../my-httpclient/.idea/my-httpclient.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-httpclient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../my-httpclient/.idea/workspace.xml" afterDir="false" />
@@ -250,21 +16,17 @@
       <change beforePath="$PROJECT_DIR$/../my-httpclient/src/main/java/com/damiza/hello/httpclient/JosnTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/../my-httpclient/src/main/java/com/damiza/hello/httpclient/JosnTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../my-httpclient/src/main/java/com/damiza/hello/httpclient/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../my-httpclient/src/main/java/com/damiza/hello/httpclient/MyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-commons/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-commons/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-dependencies/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-dependencies/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/src/main/resources/mapper/TbContentCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/src/main/resources/mapper/TbContentCategoryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/target/classes/mapper/TbContentCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/target/classes/mapper/TbContentCategoryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/classes/mapper/TbContentCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/classes/mapper/TbContentCategoryMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/lib/my-shop-commons-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/lib/my-shop-commons-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/lib/my-shop-domain-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-admin/target/my-shop-web-admin-1.0.0-SNAPSHOT/WEB-INF/lib/my-shop-domain-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-api/target/classes/com/damiza/my/shop/web/api/dao/TbContentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-api/target/classes/com/damiza/my/shop/web/api/service/TbContentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-api/target/classes/com/damiza/my/shop/web/api/service/impl/TbContentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-api/target/classes/com/damiza/my/shop/web/api/web/controller/v1/TbContentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-api/target/classes/com/damiza/my/shop/web/api/web/dto/TbContentDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-shop-web-api/target/classes/myshop.properties" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-api/target/classes/myshop.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-shop-web-api/target/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-api/target/classes/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-shop-web-api/target/my-shop-web-api-1.0.0-SNAPSHOT/WEB-INF/classes/myshop.properties" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-api/target/my-shop-web-api-1.0.0-SNAPSHOT/WEB-INF/classes/myshop.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-shop-web-api/target/my-shop-web-api-1.0.0-SNAPSHOT/WEB-INF/classes/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-api/target/my-shop-web-api-1.0.0-SNAPSHOT/WEB-INF/classes/spring-mvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-shop-web-api/target/my-shop-web-api-1.0.0-SNAPSHOT/WEB-INF/lib/my-shop-commons-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-api/target/my-shop-web-api-1.0.0-SNAPSHOT/WEB-INF/lib/my-shop-commons-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-shop-web-api/target/my-shop-web-api-1.0.0-SNAPSHOT/WEB-INF/lib/my-shop-domain-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-api/target/my-shop-web-api-1.0.0-SNAPSHOT/WEB-INF/lib/my-shop-domain-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-shop-web-ui/src/main/java/com/damiza/my/shop/web/ui/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-ui/src/main/java/com/damiza/my/shop/web/ui/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-shop-web-ui/target/classes/com/damiza/my/shop/web/ui/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-ui/target/classes/com/damiza/my/shop/web/ui/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-shop-web-ui/target/my-shop-web-ui-1.0.0-SNAPSHOT/WEB-INF/classes/com/damiza/my/shop/web/ui/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-ui/target/my-shop-web-ui-1.0.0-SNAPSHOT/WEB-INF/classes/com/damiza/my/shop/web/ui/controller/IndexController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-shop-web-ui/target/my-shop-web-ui-1.0.0-SNAPSHOT/WEB-INF/lib/my-shop-commons-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-ui/target/my-shop-web-ui-1.0.0-SNAPSHOT/WEB-INF/lib/my-shop-commons-1.0.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-shop-web-ui/target/my-shop-web-ui-1.0.0-SNAPSHOT/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/my-shop-web-ui/target/my-shop-web-ui-1.0.0-SNAPSHOT/WEB-INF/views/index.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/my-shop-dependencies/target/" />
@@ -304,11 +66,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-shop-web-ui/src/main/java/com/damiza/my/shop/web/ui/controller/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="418">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -316,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-shop-commons/src/main/java/com/damiza/my/shop/commons/utils/HttpClientUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
+            <state relative-caret-position="-897">
               <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -329,6 +91,37 @@
                 <element signature="e#1313#1314#0" expanded="true" />
                 <element signature="e#1244#1245#0" expanded="true" />
                 <element signature="e#1301#1302#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-shop-commons/src/main/java/com/damiza/my/shop/commons/utils/MapperUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2232">
+              <caret line="226" selection-start-line="226" selection-end-line="226" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+                <element signature="e#447#448#0" expanded="true" />
+                <element signature="e#2333#2344#0" expanded="true" />
+                <element signature="e#5986#5987#0" expanded="true" />
+                <element signature="e#6054#6055#0" expanded="true" />
+                <element signature="e#6607#6608#0" expanded="true" />
+                <element signature="e#6675#6676#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-shop-web-ui/src/main/java/com/damiza/my/shop/web/ui/dto/TbContent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -362,8 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/java/com/damiza/my/shop/web/admin/service/TbContentCategoryService.java" />
-        <option value="$PROJECT_DIR$/my-shop-commons/src/main/java/com/damiza/my/shop/commons/persistence/abstracts/Singleton.java" />
         <option value="$PROJECT_DIR$/my-shop-commons/src/main/java/com/damiza/my/shop/commons/persistence/abstracts/AbstractBaseTreeServiceImpl.java" />
         <option value="$PROJECT_DIR$/my-shop-commons/src/main/java/com/damiza/my/shop/commons/persistence/BaseTreeService.java" />
         <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/java/com/damiza/my/shop/web/admin/service/impl/TbContentServiceImpl.java" />
@@ -402,7 +193,6 @@
         <option value="$PROJECT_DIR$/my-shop-web-ui/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/my-shop-web-ui/src/main/resources/myshop.properties" />
         <option value="$PROJECT_DIR$/my-shop-web-ui/src/main/resources/spring-context.xml" />
-        <option value="$PROJECT_DIR$/my-shop-web-ui/src/main/java/com/damiza/my/shop/web/ui/controller/IndexController.java" />
         <option value="$PROJECT_DIR$/my-shop-web-api/pom.xml" />
         <option value="$PROJECT_DIR$/my-shop-web-ui/pom.xml" />
         <option value="$PROJECT_DIR$/my-shop-web-ui/src/main/resources/spring-mvc.xml" />
@@ -413,6 +203,9 @@
         <option value="$PROJECT_DIR$/my-shop-commons/pom.xml" />
         <option value="$PROJECT_DIR$/my-shop-web-admin/src/main/resources/mapper/TbContentCategoryMapper.xml" />
         <option value="$PROJECT_DIR$/my-shop-commons/src/main/java/com/damiza/my/shop/commons/utils/HttpClientUtils.java" />
+        <option value="$PROJECT_DIR$/my-shop-commons/src/main/java/com/damiza/my/shop/commons/utils/MapperUtils.java" />
+        <option value="$PROJECT_DIR$/my-shop-web-ui/src/main/java/com/damiza/my/shop/web/ui/dto/TbContent.java" />
+        <option value="$PROJECT_DIR$/my-shop-web-ui/src/main/java/com/damiza/my/shop/web/ui/controller/IndexController.java" />
       </list>
     </option>
   </component>
@@ -475,102 +268,11 @@
             <path>
               <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-commons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="constant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-commons" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="commons" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
               <item name="my-shop-dependencies" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-web-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-web-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-web-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
-              <item name="my-shop-web-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
               <item name="my-shop-web-ui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -601,6 +303,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my-shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my-shop" type="462c0819:PsiDirectoryNode" />
+              <item name="my-shop-web-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -658,7 +370,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551623252611" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551628516419" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../my-httpclient" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -694,7 +406,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.my-shop-web-admin">
+  <component name="RunManager" selected="Tomcat Server.my-shop-web-ui">
     <configuration name="ContentCategoryController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.damiza.my.shop.web.admin.web.controller.ContentCategoryController" />
       <module name="my-shop-web-admin" />
@@ -1202,7 +914,7 @@
       <workItem from="1551536051334" duration="2064000" />
       <workItem from="1551538226293" duration="2530000" />
       <workItem from="1551581439846" duration="2417000" />
-      <workItem from="1551587246217" duration="14973000" />
+      <workItem from="1551587246217" duration="17737000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1549728069739</created>
@@ -1237,7 +949,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364953000" />
+    <option name="totallyTimeSpent" value="367717000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1264,7 +976,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.1388102" />
-      <window_info anchor="bottom" auto_hide="true" id="Debug" order="3" sideWeight="0.49865952" weight="0.15439093" />
+      <window_info anchor="bottom" auto_hide="true" id="Debug" order="3" sideWeight="0.49865952" weight="0.04249292" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -1272,7 +984,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013405" side_tool="true" weight="0.30622008" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.08215298" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.08215298" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.3286119" />
@@ -1288,8 +1000,8 @@
       <window_info anchor="right" id="Database" order="6" sideWeight="0.49858356" weight="0.32908848" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5042493" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Bean Validation" order="10" sideWeight="0.49858356" weight="0.32908848" />
+      <window_info anchor="right" id="Coverage" order="9" sideWeight="0.5028329" side_tool="true" weight="0.32908848" />
+      <window_info anchor="right" id="Bean Validation" order="10" sideWeight="0.49716714" weight="0.32908848" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17895442" />
@@ -1346,26 +1058,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/my-shop-web-admin/src/main/java/com/damiza/my/shop/web/admin/abstracts/AbstractBaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="68" column="67" selection-start-line="68" selection-start-column="67" selection-end-line="68" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-shop-web-admin/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-shop-web-api/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-shop-web-api/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -1712,19 +1404,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-shop-web-ui/src/main/java/com/damiza/my/shop/web/ui/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-shop-commons/src/main/java/com/damiza/my/shop/commons/utils/HttpClientUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
+        <state relative-caret-position="-897">
           <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1734,6 +1416,50 @@
             <element signature="e#1313#1314#0" expanded="true" />
             <element signature="e#1244#1245#0" expanded="true" />
             <element signature="e#1301#1302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-shop-commons/src/main/java/com/damiza/my/shop/commons/utils/MapperUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2232">
+          <caret line="226" selection-start-line="226" selection-end-line="226" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#2333#2344#0" expanded="true" />
+            <element signature="e#5986#5987#0" expanded="true" />
+            <element signature="e#6054#6055#0" expanded="true" />
+            <element signature="e#6607#6608#0" expanded="true" />
+            <element signature="e#6675#6676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-shop-domain/src/main/java/com/damiza/my/shop/domain/TbContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="32" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-shop-web-ui/src/main/java/com/damiza/my/shop/web/ui/dto/TbContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-shop-web-ui/src/main/java/com/damiza/my/shop/web/ui/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
