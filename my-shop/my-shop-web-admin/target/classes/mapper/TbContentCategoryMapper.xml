@@ -73,7 +73,6 @@
         UPDATE
           tb_content_category
         SET
-          `id` = #{id}
           `parent_id` = #{parent.id}
           `name` = #{name}
           `status` = #{status}

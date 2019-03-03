@@ -72,6 +72,21 @@
         </dependency>
         <!-- Json End -->
 
+        <!-- Apache Http Begin -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>fluent-hc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+        </dependency>
+        <!-- Apache Http end -->
+
         <!--lombok简化Bean-->
         <dependency>
             <groupId>org.projectlombok</groupId>
