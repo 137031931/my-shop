@@ -1,11 +1,14 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>My-shop - 首页</title>
     <link rel="stylesheet" href="/static/css/index.css"/>
+
     <script src="/static/js/jquery-1.11.3.min.js"></script>
     <script src="/static/js/jquery.SuperSlide.2.1.1.source.js"></script>
+    <script src="/static/js/index.js"></script>
 </head>
 <body>
 <!--侧边-->
@@ -61,7 +64,10 @@
             </li>
         </ul>
         <ul class="header-right">
-            <li class="denglu">Hi~<a class="red" href="dengl.html">请登录!</a> <a href="zhuc.html">[免费注册]</a></li>
+            <c:if test="${tbUser != null }">
+                <li class="denglu">Hi~${tbUser.username}欢迎回来<a class="red" href=/logout>[注销]</a> </></li>
+            </c:if>
+            <li class="denglu">Hi~<a class="red" href="dengl.html">请登录!</a> <a href="/register">[免费注册]</a></li>
             <li class="shu"></li>
             <li class="denglu"><a class="ing_ps" href="#">我的收藏</a></li>
             <li class="shu"></li>
@@ -567,16 +573,14 @@
 <!--轮播图-->
 <div id="lunbo">
     <ul id="one">
-        <li><a href=""><img src="/static/images/banner.jpg"></a></li>
-        <li><a href=""><img src="/static/images/banner1.jpg"></a></li>
-        <li><a href=""><img src="/static/images/banner.jpg"></a></li>
-        <li><a href=""><img src="/static/images/banner1.jpg"></a></li>
+        <c:forEach items="${ppt}" var="ppt">
+        <li><a href="#"><img src="${ppt.pic}" alt="${ppt.title}" title=""${ppt.title}""></a></li>
+        </c:forEach>
     </ul>
     <ul id="two">
-        <li class="on">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
+        <c:forEach items="${ppt}" var="ppt" varStatus="status">
+            <li class="${status.count == 1?"on" : ""}">count:${status.count}</li>
+        </c:forEach>
     </ul>
     <!--轮播图左右箭头-->
     <div class="slider-page">

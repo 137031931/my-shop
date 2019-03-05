@@ -1,14 +1,8 @@
-2019-03-05 20:19:33,386 INFO [org.springframework.test.context.support.DefaultTestContextBootstrapper] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2019-03-05 20:19:33,402 INFO [org.springframework.test.context.support.DefaultTestContextBootstrapper] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7e0b0338, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@617faa95, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1e127982, org.springframework.test.context.support.DirtiesContextTestExecutionListener@60c6f5b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2038ae61, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3c0f93f1]
-2019-03-05 20:19:33,495 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context.xml]
-2019-03-05 20:19:34,261 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-druid.xml]
-2019-03-05 20:19:34,308 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-mybatis.xml]
-2019-03-05 20:19:34,324 INFO [org.springframework.context.support.GenericApplicationContext] - Refreshing org.springframework.context.support.GenericApplicationContext@4973813a: startup date [Tue Mar 05 20:19:34 CST 2019]; root of context hierarchy
-2019-03-05 20:19:35,558 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} inited
-2019-03-05 20:19:36,059 INFO [org.hibernate.validator.internal.util.Version] - HV000001: Hibernate Validator 5.3.4.Final
-2019-03-05 20:19:36,137 WARN [org.springframework.context.support.GenericApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'validator' defined in class path resource [spring-context.xml]: Invocation of init method failed; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
-2019-03-05 20:19:36,137 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed
-2019-03-05 20:19:36,137 ERROR [org.springframework.test.context.TestContextManager] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1e127982] to prepare test instance [com.damiza.my.shop.web.admin.service.test.TbUserServiceTest@301eda63]
+-------------------------------------------------------------------------------
+Test set: com.damiza.my.shop.web.admin.service.test.TbUserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 4.442 sec <<< FAILURE!
+testMD5(com.damiza.my.shop.web.admin.service.test.TbUserServiceTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
@@ -71,14 +65,8 @@ Caused by: javax.validation.ValidationException: HV000183: Unable to initialize 
 Caused by: java.lang.NoClassDefFoundError: javax/el/ExpressionFactory
 	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.buildExpressionFactory(ResourceBundleMessageInterpolator.java:98)
 	... 51 more
-2019-03-05 20:19:36,152 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context.xml]
-2019-03-05 20:19:36,215 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-druid.xml]
-2019-03-05 20:19:36,231 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-mybatis.xml]
-2019-03-05 20:19:36,246 INFO [org.springframework.context.support.GenericApplicationContext] - Refreshing org.springframework.context.support.GenericApplicationContext@37e4d7bb: startup date [Tue Mar 05 20:19:36 CST 2019]; root of context hierarchy
-2019-03-05 20:19:36,371 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-2} inited
-2019-03-05 20:19:36,449 WARN [org.springframework.context.support.GenericApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'validator' defined in class path resource [spring-context.xml]: Invocation of init method failed; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
-2019-03-05 20:19:36,449 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-2} closed
-2019-03-05 20:19:36,465 ERROR [org.springframework.test.context.TestContextManager] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1e127982] to prepare test instance [com.damiza.my.shop.web.admin.service.test.TbUserServiceTest@5ba88be8]
+
+testSelectAll(com.damiza.my.shop.web.admin.service.test.TbUserServiceTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
@@ -141,14 +129,8 @@ Caused by: javax.validation.ValidationException: HV000183: Unable to initialize 
 Caused by: java.lang.NoClassDefFoundError: javax/el/ExpressionFactory
 	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.buildExpressionFactory(ResourceBundleMessageInterpolator.java:98)
 	... 51 more
-2019-03-05 20:19:36,465 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context.xml]
-2019-03-05 20:19:36,512 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-druid.xml]
-2019-03-05 20:19:36,528 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-mybatis.xml]
-2019-03-05 20:19:36,528 INFO [org.springframework.context.support.GenericApplicationContext] - Refreshing org.springframework.context.support.GenericApplicationContext@4b23c30a: startup date [Tue Mar 05 20:19:36 CST 2019]; root of context hierarchy
-2019-03-05 20:19:36,637 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-3} inited
-2019-03-05 20:19:36,734 WARN [org.springframework.context.support.GenericApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'validator' defined in class path resource [spring-context.xml]: Invocation of init method failed; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
-2019-03-05 20:19:36,734 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-3} closed
-2019-03-05 20:19:36,734 ERROR [org.springframework.test.context.TestContextManager] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1e127982] to prepare test instance [com.damiza.my.shop.web.admin.service.test.TbUserServiceTest@74f5ce22]
+
+testGetById(com.damiza.my.shop.web.admin.service.test.TbUserServiceTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
@@ -211,14 +193,8 @@ Caused by: javax.validation.ValidationException: HV000183: Unable to initialize 
 Caused by: java.lang.NoClassDefFoundError: javax/el/ExpressionFactory
 	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.buildExpressionFactory(ResourceBundleMessageInterpolator.java:98)
 	... 51 more
-2019-03-05 20:19:36,749 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context.xml]
-2019-03-05 20:19:36,796 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-druid.xml]
-2019-03-05 20:19:36,812 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-mybatis.xml]
-2019-03-05 20:19:36,827 INFO [org.springframework.context.support.GenericApplicationContext] - Refreshing org.springframework.context.support.GenericApplicationContext@7776ab: startup date [Tue Mar 05 20:19:36 CST 2019]; root of context hierarchy
-2019-03-05 20:19:36,921 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-4} inited
-2019-03-05 20:19:36,999 WARN [org.springframework.context.support.GenericApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'validator' defined in class path resource [spring-context.xml]: Invocation of init method failed; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
-2019-03-05 20:19:36,999 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-4} closed
-2019-03-05 20:19:36,999 ERROR [org.springframework.test.context.TestContextManager] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1e127982] to prepare test instance [com.damiza.my.shop.web.admin.service.test.TbUserServiceTest@74c79fa2]
+
+testDelete(com.damiza.my.shop.web.admin.service.test.TbUserServiceTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
@@ -281,14 +257,8 @@ Caused by: javax.validation.ValidationException: HV000183: Unable to initialize 
 Caused by: java.lang.NoClassDefFoundError: javax/el/ExpressionFactory
 	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.buildExpressionFactory(ResourceBundleMessageInterpolator.java:98)
 	... 51 more
-2019-03-05 20:19:36,999 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context.xml]
-2019-03-05 20:19:37,046 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-druid.xml]
-2019-03-05 20:19:37,062 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-mybatis.xml]
-2019-03-05 20:19:37,077 INFO [org.springframework.context.support.GenericApplicationContext] - Refreshing org.springframework.context.support.GenericApplicationContext@5cde6747: startup date [Tue Mar 05 20:19:37 CST 2019]; root of context hierarchy
-2019-03-05 20:19:37,156 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-5} inited
-2019-03-05 20:19:37,234 WARN [org.springframework.context.support.GenericApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'validator' defined in class path resource [spring-context.xml]: Invocation of init method failed; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
-2019-03-05 20:19:37,234 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-5} closed
-2019-03-05 20:19:37,234 ERROR [org.springframework.test.context.TestContextManager] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1e127982] to prepare test instance [com.damiza.my.shop.web.admin.service.test.TbUserServiceTest@3a393455]
+
+testInsert(com.damiza.my.shop.web.admin.service.test.TbUserServiceTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
@@ -351,14 +321,8 @@ Caused by: javax.validation.ValidationException: HV000183: Unable to initialize 
 Caused by: java.lang.NoClassDefFoundError: javax/el/ExpressionFactory
 	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.buildExpressionFactory(ResourceBundleMessageInterpolator.java:98)
 	... 51 more
-2019-03-05 20:19:37,234 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context.xml]
-2019-03-05 20:19:37,281 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-druid.xml]
-2019-03-05 20:19:37,296 INFO [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] - Loading XML bean definitions from class path resource [spring-context-mybatis.xml]
-2019-03-05 20:19:37,312 INFO [org.springframework.context.support.GenericApplicationContext] - Refreshing org.springframework.context.support.GenericApplicationContext@56303b57: startup date [Tue Mar 05 20:19:37 CST 2019]; root of context hierarchy
-2019-03-05 20:19:37,406 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-6} inited
-2019-03-05 20:19:37,500 WARN [org.springframework.context.support.GenericApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'validator' defined in class path resource [spring-context.xml]: Invocation of init method failed; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
-2019-03-05 20:19:37,500 INFO [com.alibaba.druid.pool.DruidDataSource] - {dataSource-6} closed
-2019-03-05 20:19:37,500 ERROR [org.springframework.test.context.TestContextManager] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1e127982] to prepare test instance [com.damiza.my.shop.web.admin.service.test.TbUserServiceTest@7fe7c640]
+
+testUpdate(com.damiza.my.shop.web.admin.service.test.TbUserServiceTest)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
@@ -421,3 +385,4 @@ Caused by: javax.validation.ValidationException: HV000183: Unable to initialize 
 Caused by: java.lang.NoClassDefFoundError: javax/el/ExpressionFactory
 	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.buildExpressionFactory(ResourceBundleMessageInterpolator.java:98)
 	... 51 more
+

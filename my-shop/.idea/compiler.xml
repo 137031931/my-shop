@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="my-shop-commons" />
         <module name="my-shop-domain" />
+        <module name="my-shop-external" />
         <module name="my-shop-web-admin" />
         <module name="my-shop-web-api" />
         <module name="my-shop-web-ui" />

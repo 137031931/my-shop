@@ -4,8 +4,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -62,6 +64,20 @@ public class MapperUtils {
         return objectMapper.readValue(jsonString, clazz);
     }
 
+    /**
+     * 将指定节点的JSON数据转换为JavaBean
+     * @param jsonString
+     * @param treeNode
+     * @param clazz
+     * @param <T>
+     * @return
+     * @throws Exception
+     */
+    public static <T> T json2pojoByTree(String jsonString,String treeNode,Class<T> clazz) throws Exception {
+        JsonNode jsonNode = objectMapper.readTree(jsonString);
+        JsonNode data = jsonNode.findPath(treeNode);
+        return json2pojo(data.toString(),clazz);
+    }
     /**
      * 字符串转换为 Map<String, Object>
      *
@@ -174,6 +190,21 @@ public class MapperUtils {
         return list;
     }
 
+    /**
+     * 将指定节点的JSON数组转换为集合
+     * @param jsonStr JSON 字符串
+     * @param treeNode 查找JSON中的数
+     * @param clazz
+     * @param <T>
+     * @return
+     * @throws Exception
+     */
+    public static <T> List<T> json2listByTree(String jsonStr, String treeNode, Class<T> clazz) throws Exception {
+        JsonNode jsonNode = objectMapper.readTree(jsonStr);
+        JsonNode data = jsonNode.findPath(treeNode);
+        return json2list(data.toString(),clazz);
+
+    }
 
     /**
      * 获取泛型的 Collection Type

@@ -33,4 +33,11 @@
         <property name="maxUploadSize" value="${web.maxUploadSize}"/>
 
     </bean>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/login"/>
+            <mvc:mapping path="/register"/>
+            <bean class="com.damiza.my.shop.web.ui.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

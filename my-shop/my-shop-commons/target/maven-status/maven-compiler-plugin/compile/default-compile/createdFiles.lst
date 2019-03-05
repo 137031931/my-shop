@@ -1,0 +1,14 @@
+com\damiza\my\shop\commons\persistence\BaseService.class
+com\damiza\my\shop\commons\constant\ConstantUtils.class
+com\damiza\my\shop\commons\utils\RegexpUtils.class
+com\damiza\my\shop\commons\persistence\BaseTreeEntity.class
+com\damiza\my\shop\commons\persistence\BaseDao.class
+com\damiza\my\shop\commons\utils\HttpClientUtils.class
+com\damiza\my\shop\commons\utils\MapperUtils.class
+com\damiza\my\shop\commons\validator\BeanValidator.class
+com\damiza\my\shop\commons\persistence\BaseTreeDao.class
+com\damiza\my\shop\commons\dto\PageInfo.class
+com\damiza\my\shop\commons\dto\BaseResult.class
+com\damiza\my\shop\commons\persistence\BaseEntity.class
+com\damiza\my\shop\commons\utils\MapperUtils$1.class
+com\damiza\my\shop\commons\persistence\BaseTreeService.class
