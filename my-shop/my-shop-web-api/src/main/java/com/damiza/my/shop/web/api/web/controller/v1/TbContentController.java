@@ -14,13 +14,15 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "${api.path.v1}/contents")
 public class TbContentController {
+
     @Autowired
     private TbContentService tbContentService;
 
     @ModelAttribute
-    public TbContent getTbContent(Long id){
+    public TbContent getTbContent(Long id) {
         TbContent tbContent = null;
-        if (id == null){
+
+        if (id == null) {
             tbContent = new TbContent();
         }
 
@@ -28,26 +30,23 @@ public class TbContentController {
     }
 
     /**
-     * 根据类别ID查询内容
-     * @param tbContent
-     * @param categoryId
+     * 幻灯片接口
      * @return
      */
-    @RequestMapping(value = "{category_id}",method = RequestMethod.GET)
-    public BaseResult findContentByCategoryId(TbContent tbContent, @PathVariable(value = "category_id") Long categoryId){
+    @RequestMapping(value = "ppt", method = RequestMethod.GET)
+    public BaseResult findPPT() {
         List<TbContentDTO> tbContentDTOS = null;
-        List<TbContent> tbContents = tbContentService.selectByCategoryId(categoryId);
-        if (tbContents != null && tbContents.size() > 0){
+        List<TbContent> tbContents = tbContentService.selectByCategoryId(89L);
+
+        if (tbContents != null && tbContents.size() > 0) {
             tbContentDTOS = new ArrayList<>();
-            for (TbContent content : tbContents) {
+            for (TbContent tbContent : tbContents) {
                 TbContentDTO dto = new TbContentDTO();
-                //因为字段如果一多就很麻烦所以用下面的BeanUtils工具类
-//                dto.setTitle(tbContent.getTitle());
-                BeanUtils.copyProperties(tbContent,dto);
+                BeanUtils.copyProperties(tbContent, dto);
                 tbContentDTOS.add(dto);
             }
         }
 
-        return BaseResult.success("成功",tbContentDTOS);
+        return BaseResult.success("成功", tbContentDTOS);
     }
 }

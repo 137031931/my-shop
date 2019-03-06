@@ -7,7 +7,6 @@ import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,7 +17,6 @@ import java.util.Map;
  * <p>Title: MapperUtils</p>
  * <p>Description: </p>
  *
- * @version 1.0.0
  */
 public class MapperUtils {
     private final static ObjectMapper objectMapper = new ObjectMapper();
@@ -65,19 +63,19 @@ public class MapperUtils {
     }
 
     /**
-     * 将指定节点的JSON数据转换为JavaBean
+     * 将指定节点的 JSON 数据转换为 JavaBean
+     *
      * @param jsonString
-     * @param treeNode
      * @param clazz
-     * @param <T>
      * @return
      * @throws Exception
      */
-    public static <T> T json2pojoByTree(String jsonString,String treeNode,Class<T> clazz) throws Exception {
+    public static <T> T json2pojoByTree(String jsonString, String treeNode, Class<T> clazz) throws Exception {
         JsonNode jsonNode = objectMapper.readTree(jsonString);
         JsonNode data = jsonNode.findPath(treeNode);
-        return json2pojo(data.toString(),clazz);
+        return json2pojo(data.toString(), clazz);
     }
+
     /**
      * 字符串转换为 Map<String, Object>
      *
@@ -191,19 +189,16 @@ public class MapperUtils {
     }
 
     /**
-     * 将指定节点的JSON数组转换为集合
+     * 将指定节点的 JSON 数组转换为集合
      * @param jsonStr JSON 字符串
-     * @param treeNode 查找JSON中的数
-     * @param clazz
-     * @param <T>
+     * @param treeNode 查找 JSON 中的节点
      * @return
      * @throws Exception
      */
-    public static <T> List<T> json2listByTree(String jsonStr, String treeNode, Class<T> clazz) throws Exception {
+    public static <T> List<T> json2listByTree(String jsonStr, String treeNode, Class<T> clazz) throws  Exception {
         JsonNode jsonNode = objectMapper.readTree(jsonStr);
         JsonNode data = jsonNode.findPath(treeNode);
-        return json2list(data.toString(),clazz);
-
+        return json2list(data.toString(), clazz);
     }
 
     /**
@@ -255,4 +250,3 @@ public class MapperUtils {
         return objectMapper.convertValue(obj, clazz);
     }
 }
-

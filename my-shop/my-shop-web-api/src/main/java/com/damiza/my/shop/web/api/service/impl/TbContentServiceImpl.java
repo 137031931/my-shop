@@ -20,8 +20,8 @@ public class TbContentServiceImpl implements TbContentService {
         tbContentCategory.setId(categoryId);
 
         TbContent tbContent = new TbContent();
-
         tbContent.setTbContentCategory(tbContentCategory);
-        return tbContentDao.selectByCategoryId(tbContent) ;
+
+        return tbContentDao.selectByCategoryId(tbContent);
     }
 }

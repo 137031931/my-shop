@@ -31,9 +31,6 @@ public class IndexController {
      */
     private void requestContentsPPT(Model model){
         List<TbContent> tbContents = ContentsApi.ppt();
-        for(TbContent tbContent : tbContents){
-            System.out.println(tbContent);
-        }
         model.addAttribute("ppt",tbContents);
     }
 }
