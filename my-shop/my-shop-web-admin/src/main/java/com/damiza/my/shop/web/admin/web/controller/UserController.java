@@ -23,122 +23,98 @@ import java.util.Map;
 
 @Controller
 @RequestMapping(value = "user")
-public class UserController extends AbstractBaseController<TbUser,TbUserService> {
+public class UserController extends AbstractBaseController<TbUser, TbUserService> {
 
-    //这个注解说明下面的方法会在@RequestMapping执行之前执行
     @ModelAttribute
-    public TbUser getTbUser(Long id){
+    public TbUser getTbUser(Long id) {
         TbUser tbUser = null;
-        //id不为空,则从数据库获取
-        if (id != null){
+
+        // id 不为空，则从数据库获取
+        if (id != null) {
             tbUser = service.getById(id);
-        }
-        else {
+        } else {
             tbUser = new TbUser();
         }
-        return tbUser;
 
+        return tbUser;
     }
 
     /**
-     * 跳转到表单页面
+     * 跳转到用户列表页
+     *
      * @return
      */
     @Override
-    @RequestMapping(value = "form",method = RequestMethod.GET)
-    public String form(){
+    @RequestMapping(value = "list", method = RequestMethod.GET)
+    public String list() {
+        return "user_list";
+    }
+
+    /**
+     * 跳转用户表单页
+     *
+     * @return
+     */
+    @Override
+    @RequestMapping(value = "form", method = RequestMethod.GET)
+    public String form() {
         return "user_form";
     }
 
     /**
-     * 跳转时候生效一次所以用RedirectAttributes
-     * 保存用户信息,并给一个提示
+     * 保存用户信息
+     *
      * @param tbUser
-     * @param redirectAttributes
      * @return
      */
     @Override
-    @RequestMapping(value = "save",method = RequestMethod.POST)
-    public String save(TbUser tbUser,Model model, RedirectAttributes redirectAttributes){
-
+    @RequestMapping(value = "save", method = RequestMethod.POST)
+    public String save(TbUser tbUser, Model model, RedirectAttributes redirectAttributes) {
         BaseResult baseResult = service.save(tbUser);
 
-        //保存成功
-        if(baseResult.getStatus() == 200){
-            redirectAttributes.addFlashAttribute("baseResult",baseResult);
+        // 保存成功
+        if (baseResult.getStatus() == 200) {
+            redirectAttributes.addFlashAttribute("baseResult", baseResult);
             return "redirect:/user/list";
         }
-        //保存失败
-        else{
-            model.addAttribute("baseResult",baseResult);
 
+        // 保存失败
+        else {
+            model.addAttribute("baseResult", baseResult);
             return "user_form";
         }
     }
 
-
     /**
      * 删除用户信息
+     *
      * @param ids
      * @return
      */
     @Override
     @ResponseBody
-    @RequestMapping(value = "delete",method = RequestMethod.POST)
-    public BaseResult delete(String ids){
+    @RequestMapping(value = "delete", method = RequestMethod.POST)
+    public BaseResult delete(String ids) {
         BaseResult baseResult = null;
-
-        if(StringUtils.isNotBlank(ids)){
+        if (StringUtils.isNotBlank(ids)) {
             String[] idArray = ids.split(",");
             service.deleteMulti(idArray);
             baseResult = BaseResult.success("删除用户成功");
-        }
-
-        else {
+        } else {
             baseResult = BaseResult.fail("删除用户失败");
         }
+
         return baseResult;
     }
 
     /**
-     * 分页查询
-     * @param request
-     * @return
-     */
-    @Override
-    @ResponseBody
-    @RequestMapping(value = "page",method = RequestMethod.GET)
-    public PageInfo<TbUser> page(HttpServletRequest request,TbUser tbUser){
-        Map<String,Object> result = new HashMap<>();
-        String strDraw = request.getParameter("draw");
-        String strStart = request.getParameter("start");
-        String strLength = request.getParameter("length");
-
-        int draw = strDraw == null ? 0 :Integer.parseInt(strDraw);
-        int start = strStart == null ? 0 :Integer.parseInt(strStart);
-        int length = strLength == null ? 10 :Integer.parseInt(strLength);
-
-        //封装dataTables需要的结果
-        PageInfo<TbUser> pageInfo = service.page(start, length, draw,tbUser);
-        return pageInfo;
-    }
-
-    /**
      * 显示用户详情
-     * @param tbUser
+     *
      * @return
      */
     @Override
-
-    @RequestMapping(value = "detail",method = RequestMethod.GET)
-    public String detail(TbUser tbUser){
-        System.out.println(tbUser.getEmail());
+    @RequestMapping(value = "detail", method = RequestMethod.GET)
+    public String detail() {
         return "user_detail";
-    }
-
-    @Override
-    @RequestMapping(value = "list",method = RequestMethod.GET)
-    public String list(){
-        return "user_list";
     }
 }

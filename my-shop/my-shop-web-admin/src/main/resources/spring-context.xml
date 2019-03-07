@@ -5,21 +5,20 @@
     <!--配置依赖-->
     <context:annotation-config/>
     <context:component-scan base-package="com.damiza.my.shop.web.admin">
-        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
 
     <!-- 配置 Bean Validator 定义 -->
     <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
     <bean id="beanValidator" class="com.damiza.my.shop.commons.validator.BeanValidator">
-        <property name="validator" ref="validator"/>
+        <property name="validator" ref="validator" />
     </bean>
+
     <!-- 配置事务管理器 -->
-
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-
         <property name="dataSource" ref="dataSource"/>
-
     </bean>
+
     <!-- 开启事务注解驱动 -->
     <tx:annotation-driven transaction-manager="transactionManager" />
 </beans>

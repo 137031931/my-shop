@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
-public abstract class AbstractBaseController<T extends BaseEntity,S extends BaseService<T>> {
+public abstract class AbstractBaseController<T extends BaseEntity, S extends BaseService<T>> {
 
     /**
      * 注入业务逻辑层
@@ -24,7 +24,9 @@ public abstract class AbstractBaseController<T extends BaseEntity,S extends Base
     protected S service;
 
     /**
-     * 跳转到列表页
+     * 跳转列表页
+     *
+     * @return
      */
     public abstract String list();
 
@@ -37,6 +39,7 @@ public abstract class AbstractBaseController<T extends BaseEntity,S extends Base
 
     /**
      * 保存信息
+     *
      * @param entity
      * @param model
      * @param redirectAttributes
@@ -45,7 +48,8 @@ public abstract class AbstractBaseController<T extends BaseEntity,S extends Base
     public abstract String save(T entity, Model model, RedirectAttributes redirectAttributes);
 
     /**
-     * 删除信息
+     * 删除
+     *
      * @param ids
      * @return
      */
@@ -53,15 +57,9 @@ public abstract class AbstractBaseController<T extends BaseEntity,S extends Base
 
     /**
      * 分页查询
-     * @param request
-     * @param entity
-     * @return
-     */
-
-    /**
-     * 分页查询
      *
      * @param request
+     * @param entity
      * @return
      */
     @ResponseBody
@@ -75,15 +73,16 @@ public abstract class AbstractBaseController<T extends BaseEntity,S extends Base
         int start = strStart == null ? 0 : Integer.parseInt(strStart);
         int length = strLength == null ? 10 : Integer.parseInt(strLength);
 
-        //封装dataTables需要的结果
+        // 封装 Datatables 需要的结果
         PageInfo<T> pageInfo = service.page(start, length, draw, entity);
+
         return pageInfo;
     }
+
     /**
      * 跳转详情页
-     * @param entity
+     *
      * @return
      */
-    public abstract String detail(T entity);
-
-    }
+    public abstract String detail();
+}

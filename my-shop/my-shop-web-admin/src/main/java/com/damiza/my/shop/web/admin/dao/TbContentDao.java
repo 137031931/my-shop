@@ -4,9 +4,13 @@ import com.damiza.my.shop.commons.persistence.BaseDao;
 import com.damiza.my.shop.domain.TbContent;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.Map;
 
 @Repository
 public interface TbContentDao extends BaseDao<TbContent> {
+    /**
+     * 根据类目 ID 删除内容
+     *
+     * @param categoryIds
+     */
+    void deleteByCategoryId(String[] categoryIds);
 }

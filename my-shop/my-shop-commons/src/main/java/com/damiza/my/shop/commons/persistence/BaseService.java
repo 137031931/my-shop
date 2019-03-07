@@ -18,29 +18,30 @@ public interface BaseService<T extends BaseEntity> {
 
     /**
      * 保存信息
-     * @param
+     * @param entity
      * @return
      */
     BaseResult save(T entity);
 
     /**
-     * 删除信息
+     * 删除用户信息
      * @param id
      */
     void delete(Long id);
 
     /**
-     * 根据id获取用户信息
+     * 根据 ID 获取信息
      * @param id
      * @return
      */
     T getById(Long id);
 
     /**
-     * 跟新用户信息
+     * 更新信息
      * @param entity
      */
     void update(T entity);
+
     /**
      * 批量删除
      * @param ids

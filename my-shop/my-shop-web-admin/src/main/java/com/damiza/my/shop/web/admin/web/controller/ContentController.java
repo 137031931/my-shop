@@ -15,13 +15,13 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping(value = "content")
-public class TbContentController extends AbstractBaseController<TbContent,TbContentService> {
+public class ContentController extends AbstractBaseController<TbContent, TbContentService> {
 
-    //这个注解说明下面的方法会在@RequestMapping执行之前执行
     @ModelAttribute
     public TbContent getTbContent(Long id) {
-        TbContent tbContent  = null;
-        //id不为空,则从数据库获取
+        TbContent tbContent = null;
+
+        // id 不为空，则从数据库获取
         if (id != null) {
             tbContent = service.getById(id);
         } else {
@@ -29,67 +29,67 @@ public class TbContentController extends AbstractBaseController<TbContent,TbCont
         }
 
         return tbContent;
-
     }
 
     /**
-     * 跳转到用户列表页
+     * 跳转内容列表页
      *
      * @return
      */
+    @Override
     @RequestMapping(value = "list", method = RequestMethod.GET)
     public String list() {
         return "content_list";
     }
 
     /**
-     * 跳转到内容列表
+     * 跳转表单页
      *
      * @return
      */
+    @Override
     @RequestMapping(value = "form", method = RequestMethod.GET)
     public String form() {
         return "content_form";
     }
 
     /**
-     * 跳转时候生效一次所以用RedirectAttributes
-     * 保存用户信息,并给一个提示
+     * 保存
      *
-     * @param tbContent
+     * @param entity
+     * @param model
      * @param redirectAttributes
      * @return
      */
+    @Override
     @RequestMapping(value = "save", method = RequestMethod.POST)
-    public String save(TbContent tbContent, Model model, RedirectAttributes redirectAttributes) {
+    public String save(TbContent entity, Model model, RedirectAttributes redirectAttributes) {
+        BaseResult baseResult = service.save(entity);
 
-        BaseResult baseResult = service.save(tbContent);
-
-        //保存成功
+        // 保存成功
         if (baseResult.getStatus() == 200) {
             redirectAttributes.addFlashAttribute("baseResult", baseResult);
             return "redirect:/content/list";
         }
-        //保存失败
+
+        // 保存失败
         else {
             model.addAttribute("baseResult", baseResult);
-
             return "content_form";
         }
     }
 
-
     /**
-     * 删除内容信息
+     * 删除
      *
      * @param ids
      * @return
      */
+    @Override
     @ResponseBody
     @RequestMapping(value = "delete", method = RequestMethod.POST)
     public BaseResult delete(String ids) {
         BaseResult baseResult = null;
-
         if (StringUtils.isNotBlank(ids)) {
             String[] idArray = ids.split(",");
             service.deleteMulti(idArray);
@@ -97,19 +97,18 @@ public class TbContentController extends AbstractBaseController<TbContent,TbCont
         } else {
             baseResult = BaseResult.fail("删除内容失败");
         }
+
         return baseResult;
     }
 
-
     /**
-     * 显示详情
+     * 跳转详情页
      *
-     * @param tbContent
      * @return
      */
+    @Override
     @RequestMapping(value = "detail", method = RequestMethod.GET)
-    public String detail(TbContent tbContent) {
+    public String detail() {
         return "content_detail";
     }
-
 }

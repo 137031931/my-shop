@@ -3,7 +3,7 @@ package com.damiza.my.shop.web.admin.service.impl;
 import com.damiza.my.shop.commons.dto.BaseResult;
 import com.damiza.my.shop.commons.validator.BeanValidator;
 import com.damiza.my.shop.domain.TbContentCategory;
-import com.damiza.my.shop.web.admin.abstracts.AbstractsBaseTreeServiceImpl;
+import com.damiza.my.shop.web.admin.abstracts.AbstractBaseTreeServiceImpl;
 
 import com.damiza.my.shop.web.admin.dao.TbContentCategoryDao;
 import com.damiza.my.shop.web.admin.service.TbContentCategoryService;
@@ -14,7 +14,7 @@ import java.util.Date;
 
 @Service
 @Transactional(readOnly = true)
-public class TbContentCategoryServiceImpl extends AbstractsBaseTreeServiceImpl<TbContentCategory, TbContentCategoryDao> implements TbContentCategoryService {
+public class TbContentCategoryServiceImpl extends AbstractBaseTreeServiceImpl<TbContentCategory, TbContentCategoryDao> implements TbContentCategoryService {
 
     @Override
     @Transactional(readOnly = false)

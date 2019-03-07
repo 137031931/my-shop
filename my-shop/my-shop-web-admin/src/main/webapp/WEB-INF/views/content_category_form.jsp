@@ -49,7 +49,7 @@
 
                     <div class="box box-info">
                         <div class="box-header with-border">
-                            <h3 class="box-title"> ${tbContent.id == null ? "新增":"编辑"}内容</h3>
+                            <h3 class="box-title"> ${tbContentCategory.id == null ? "新增":"编辑"}内容</h3>
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->

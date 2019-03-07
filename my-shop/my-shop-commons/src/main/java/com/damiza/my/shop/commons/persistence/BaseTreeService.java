@@ -8,38 +8,46 @@ import java.util.List;
  * 通用树形接口
  * @param <T>
  */
-public interface BaseTreeService <T extends BaseEntity>{
+public interface BaseTreeService<T extends BaseEntity> {
     /**
-     * 查询全部信息
-     * @return
-     * 1.8版本以后public可以不写
+     * 查询全部数据
      *
+     * @return
      */
     List<T> selectAll();
 
     /**
      * 新增
-     * @param
+     *
+     * @param entity
      */
     BaseResult save(T entity);
 
     /**
-     * 根据id删除方法
+     * 删除
+     *
+     * @param id
      */
     void delete(Long id);
 
     /**
-     * 根据id查询信息
+     * 根据 ID 查询信息
+     *
+     * @param id
+     * @return
      */
     T getById(Long id);
 
     /**
      * 更新
+     *
+     * @param entity
      */
     void update(T entity);
 
     /**
-     * 根据父级节点查询所有子节点
+     * 根据父级节点 ID 查询所有子节点
+     *
      * @param pid
      * @return
      */
