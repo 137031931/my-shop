@@ -62,3 +62,4 @@ public interface BaseDao<T extends BaseEntity> {
      */
     int count(T entity);
 }
+

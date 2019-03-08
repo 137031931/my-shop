@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "content/category")
+@RequestMapping(value = "/content/category")
 public class ContentCategoryController extends AbstractBaseTreeController<TbContentCategory, TbContentCategoryService> {
 
     @ModelAttribute
