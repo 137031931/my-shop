@@ -17,16 +17,13 @@
         LEFT JOIN tb_content_category AS b ON a.parent_id = b.id
     </sql>
 
-    <select id="selectAll" resultType="TbContentCategory">
+    <select id="getById" resultType="TbContentCategory">
         SELECT
         <include refid="tbContentCategoryColumns"/>
         FROM
         tb_content_category AS a
         <include refid="tbContentCategoryJoins"/>
-        ORDER BY
-        a.parent_id ASC,
-        a.sort_order ASC,
-        a.is_parent DESC
+        WHERE a.id = #{id}
     </select>
 
     <select id="selectByPid" resultType="TbContentCategory">
@@ -38,13 +35,17 @@
         WHERE a.parent_id = #{parentId}
     </select>
 
-    <select id="getById" resultType="TbContentCategory">
+    <select id="selectAll" resultType="TbContentCategory">
         SELECT
         <include refid="tbContentCategoryColumns"/>
         FROM
         tb_content_category AS a
         <include refid="tbContentCategoryJoins"/>
-        where a.id = #{id}
+        ORDER BY
+        a.parent_id ASC,
+        a.sort_order ASC,
+        a.name ASC,
+        a.is_parent DESC
     </select>
 
     <insert id="insert">
@@ -69,18 +70,26 @@
           );
     </insert>
 
+    <delete id="delete">
+        DELETE FROM tb_content_category
+        WHERE id IN
+        <foreach collection="array" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </delete>
+
     <update id="update">
         UPDATE
           tb_content_category
         SET
-          `parent_id` = #{parent.id}
-          `name` = #{name}
-          `status` = #{status}
-          `sort_order` = #{sortOrder}
-          `is_parent` = #{isParent}
-          `created` = #{created}
+          `id` = #{id},
+          `parent_id` = #{parent.id},
+          `name` = #{name},
+          `status` = #{status},
+          `sort_order` = #{sortOrder},
+          `is_parent` = #{isParent},
+          `created` = #{created},
           `updated` = #{updated}
-        WHERE `id` = #{id};
-
+        WHERE `id` = #{id}
     </update>
 </mapper>
